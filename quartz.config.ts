@@ -27,6 +27,14 @@ const config: QuartzConfig = {
         body: "Roboto",
         code: "Roboto Mono",
       },
+      // light: page background
+      // lightgray: borders
+      // gray: heavy borders
+      // darkgray: body text
+      // dark: header
+      // secondary: link color
+      // tertiary: hover states
+      // highlight: highlighted text
       colors: {
         lightMode: {
           light: "#faf8f8",
@@ -40,6 +48,17 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
+          light: "#1a1a1a",
+          lightgray: "#3a2964",
+          gray: "#584b75",
+          darkgray: "#b9b7be",
+          dark: "#a5a1ad",
+          secondary: "#9d81e0",
+          tertiary: "#8185e0",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
+        },
+        ocean: {
           light: "#0C2231",
           lightgray: "#3a7ca5",
           gray: "#3a7ca5",
@@ -48,6 +67,28 @@ const config: QuartzConfig = {
           secondary: "#81c3d7",
           tertiary: "#3a7ca5",
           highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
+        },
+        blood: {
+          light: "#130501",
+          lightgray: "#c48287",
+          gray: "#38040E",
+          darkgray: "#c48287",
+          dark: "#A5121A",
+          secondary: "#C62F39",
+          tertiary: "#A5121A",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
+        },
+        hacker: {
+          light: "#000000",
+          lightgray: "#007200",
+          gray: "#00ba00",
+          darkgray: "#aeafae",
+          dark: "#00bd00",
+          secondary: "#73af73",
+          tertiary: "#397539",
+          highlight: "#8f9fa926",
           textHighlight: "#b3aa0288",
         },
       },

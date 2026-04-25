@@ -5,7 +5,7 @@ import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 import { JSX } from "preact"
 import style from "./styles/contentMeta.scss"
-import {resolveRelative, simplifySlug } from "../util/path"
+import { resolveRelative, simplifySlug } from "../util/path"
 
 interface ContentMetaOptions {
   /**
@@ -38,11 +38,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       return { type: "external" as const, href: ref }
     }
 
-    const targetSlug = simplifySlug(ref)
+    const normalizedRef = ref.replace(/^\/+|\/+$/g, "")
 
-    const target = 
-      allFiles.find((f) => f.slug && simplifySlug(f.slug) === targetSlug) ??
-      allFiles.find((f) => f.slug === ref) ??
+    const target =
+      allFiles.find((f) => f.slug && simplifySlug(f.slug) === normalizedRef) ??
+      allFiles.find((f) => f.slug === normalizedRef) ??
       allFiles.find((f) => f.frontmatter?.title === ref)
 
     if (target && target.slug) {

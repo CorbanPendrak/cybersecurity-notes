@@ -1,8 +1,12 @@
-const userPref = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-const currentTheme = localStorage.getItem("theme") ?? userPref
-document.documentElement.setAttribute("saved-theme", currentTheme)
+const allThemes = ["dark", "light", "ocean", "blood", "hacker"] as const
+type ThemeName = (typeof allThemes)[number]
 
-const emitThemeChangeEvent = (theme: "light" | "dark") => {
+const userPref: ThemeName  = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+const stored = localStorage.getItem("theme") as ThemeName | null
+const initialTheme: ThemeName = stored && allThemes.includes(stored) ? stored : userPref
+document.documentElement.setAttribute("saved-theme", initialTheme)
+
+const emitThemeChangeEvent = (theme: ThemeName) => {
   const event: CustomEventMap["themechange"] = new CustomEvent("themechange", {
     detail: { theme },
   })
@@ -11,11 +15,15 @@ const emitThemeChangeEvent = (theme: "light" | "dark") => {
 
 document.addEventListener("nav", () => {
   const switchTheme = () => {
-    const newTheme =
-      document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
-    document.documentElement.setAttribute("saved-theme", newTheme)
-    localStorage.setItem("theme", newTheme)
-    emitThemeChangeEvent(newTheme)
+    const current =
+      document.documentElement.getAttribute("saved-theme") as ThemeName | null
+    const currentIndex = current ? allThemes.indexOf(current) : -1
+    const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % allThemes.length : 0
+    const nextTheme = allThemes[nextIndex]
+
+    document.documentElement.setAttribute("saved-theme", nextTheme)
+    localStorage.setItem("theme", nextTheme)
+    emitThemeChangeEvent(nextTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {

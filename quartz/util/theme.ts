@@ -13,6 +13,7 @@ export interface ColorScheme {
 interface Colors {
   lightMode: ColorScheme
   darkMode: ColorScheme
+  [themeName: string]: ColorScheme
 }
 
 export type FontSpecification =
@@ -35,7 +36,7 @@ export interface Theme {
   fontOrigin: "googleFonts" | "local"
 }
 
-export type ThemeKey = keyof Colors
+export type ThemeKey = keyof Colors & string
 
 const DEFAULT_SANS_SERIF =
   'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
@@ -141,19 +142,30 @@ export async function processGoogleFonts(
 }
 
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
+  const cssVarsForScheme = (scheme: ColorScheme) => `
+  --light: ${scheme.light};
+  --lightgray: ${scheme.lightgray};
+  --gray: ${scheme.gray};
+  --darkgray: ${scheme.darkgray};
+  --dark: ${scheme.dark};
+  --secondary: ${scheme.secondary};
+  --tertiary: ${scheme.tertiary};
+  --highlight: ${scheme.highlight};
+  --textHighlight: ${scheme.textHighlight};`
+
+  const extraThemeRules = Object.entries(theme.colors)
+    .filter(([themeName]) => themeName !== "lightMode" && themeName !== "darkMode")
+    .map(
+      ([themeName, scheme]) => `
+:root[saved-theme="${themeName}"] {${cssVarsForScheme(scheme)}}`,
+    )
+    .join("\n")
+
   return `
 ${stylesheet.join("\n\n")}
 
 :root {
-  --light: ${theme.colors.lightMode.light};
-  --lightgray: ${theme.colors.lightMode.lightgray};
-  --gray: ${theme.colors.lightMode.gray};
-  --darkgray: ${theme.colors.lightMode.darkgray};
-  --dark: ${theme.colors.lightMode.dark};
-  --secondary: ${theme.colors.lightMode.secondary};
-  --tertiary: ${theme.colors.lightMode.tertiary};
-  --highlight: ${theme.colors.lightMode.highlight};
-  --textHighlight: ${theme.colors.lightMode.textHighlight};
+${cssVarsForScheme(theme.colors.lightMode)}
 
   --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
@@ -162,15 +174,9 @@ ${stylesheet.join("\n\n")}
 }
 
 :root[saved-theme="dark"] {
-  --light: ${theme.colors.darkMode.light};
-  --lightgray: ${theme.colors.darkMode.lightgray};
-  --gray: ${theme.colors.darkMode.gray};
-  --darkgray: ${theme.colors.darkMode.darkgray};
-  --dark: ${theme.colors.darkMode.dark};
-  --secondary: ${theme.colors.darkMode.secondary};
-  --tertiary: ${theme.colors.darkMode.tertiary};
-  --highlight: ${theme.colors.darkMode.highlight};
-  --textHighlight: ${theme.colors.darkMode.textHighlight};
+${cssVarsForScheme(theme.colors.darkMode)}
 }
+
+${extraThemeRules}
 `
 }

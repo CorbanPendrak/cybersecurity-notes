@@ -104,3 +104,4 @@ function findMocTarget(mocMeta: string, allFiles: QuartzComponentProps["allFiles
 	- [x] Footer websites: `quartz.layout.ts`
 	- [x] Color theme: `quartz.config.ts`
 	- [x] Typography : `quartz.config.ts`
+	- [x] Multiple themes (Lots of components stuff, just use AI next time)
