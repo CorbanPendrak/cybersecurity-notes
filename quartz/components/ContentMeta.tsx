@@ -10,13 +10,17 @@ interface ContentMetaOptions {
   /**
    * Whether to display reading time
    */
+  showMOC: boolean
+  showDate: boolean
   showReadingTime: boolean
   showComma: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
-  showReadingTime: true,
-  showComma: true,
+  showMOC: true,
+  showDate: false,
+  showReadingTime: false,
+  showComma: false,
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -29,7 +33,32 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
-      if (fileData.dates) {
+      if (options.showMOC) {
+        let mocMeta = 
+          (fileData.frontmatter?.MOC as string | undefined) ??
+          (fileData.frontmatter?.moc as string | undefined)
+
+        let href = ""
+        if (mocMeta) {
+          if (mocMeta.startsWith("http")) {
+            href = mocMeta;
+          } else if (mocMeta.startsWith("\[\[")) {
+            mocMeta = mocMeta.slice(2).slice(0, -2);  
+            href = `/${mocMeta}`;
+          } else {
+            href = `/${mocMeta}`;
+          }
+
+	  const mocLabel = 
+            (fileData.frontmatter?.MOCTitle as string | undefined) ??
+            (fileData.frontmatter?.mocTitle as string | undefined) ??
+            mocMeta
+
+          segments.push(<a href={href} class="content-meta-moc">{mocLabel}</a>,)
+        }
+      }
+
+      if (options.showDate && fileData.dates) {
         segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
       }
 

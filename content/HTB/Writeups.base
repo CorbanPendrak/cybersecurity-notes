@@ -1,0 +1,10 @@
+views:
+  - type: cards
+    name: Main
+    filters:
+      and:
+        - file.name.endsWith("Writeup")
+    order:
+      - file.name
+      - Category
+    image: note.socialImage

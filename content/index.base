@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: MOCs
+    filters:
+      and:
+        - file.hasLink("index")
+        - file.name.contains("MOC")
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
