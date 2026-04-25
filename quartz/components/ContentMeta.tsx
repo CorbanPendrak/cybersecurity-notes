@@ -5,6 +5,7 @@ import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 import { JSX } from "preact"
 import style from "./styles/contentMeta.scss"
+import {resolveRelative, simplifySlug } from "../util/path"
 
 interface ContentMetaOptions {
   /**
@@ -27,34 +28,55 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
   // Merge options with defaults
   const options: ContentMetaOptions = { ...defaultOptions, ...opts }
 
-  function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
+  function findMocTarget(mocMeta: string, allFiles: QuartzComponentProps["allFiles"]) {
+    let ref = mocMeta.trim()
+    if (ref.startsWith("[[") && ref.endsWith("]]")) {
+      ref = ref.slice(2, -2).trim()
+    }
+
+    if (ref.startsWith("http")) {
+      return { type: "external" as const, href: ref }
+    }
+
+    const targetSlug = simplifySlug(ref)
+
+    const target = 
+      allFiles.find((f) => f.slug && simplifySlug(f.slug) === targetSlug) ??
+      allFiles.find((f) => f.slug === ref) ??
+      allFiles.find((f) => f.frontmatter?.title === ref)
+
+    if (target && target.slug) {
+      return { type: "internal" as const, target }
+    }
+    return { type: "fallback" as const, href: `/${ref.replace(/^\//, "")}` }
+  }
+
+  function ContentMetadata({ cfg, fileData, allFiles, displayClass }: QuartzComponentProps) {
     const text = fileData.text
 
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
       if (options.showMOC) {
-        let mocMeta = 
+        let mocMetaRaw = 
           (fileData.frontmatter?.MOC as string | undefined) ??
           (fileData.frontmatter?.moc as string | undefined)
 
-        let href = ""
-        if (mocMeta) {
-          if (mocMeta.startsWith("http")) {
-            href = mocMeta;
-          } else if (mocMeta.startsWith("\[\[")) {
-            mocMeta = mocMeta.slice(2).slice(0, -2);  
-            href = `/${mocMeta}`;
-          } else {
-            href = `/${mocMeta}`;
-          }
-
-	  const mocLabel = 
+        if (mocMetaRaw) {
+          const mocLabel =
             (fileData.frontmatter?.MOCTitle as string | undefined) ??
             (fileData.frontmatter?.mocTitle as string | undefined) ??
-            mocMeta
+            mocMetaRaw.slice(2,-2).trim()
+          
+          const resolved = findMocTarget(mocMetaRaw, allFiles)
 
-          segments.push(<a href={href} class="content-meta-moc">{mocLabel}</a>,)
+          if (resolved.type === "internal" && fileData.slug && resolved.target.slug) {
+            const href = resolveRelative(fileData.slug, resolved.target.slug)
+            segments.push(
+              <a href={href} class="content-meta-moc internal">{mocLabel}</a>,)
+          } else if (resolved.type === "external" || resolved.type === "fallback") {
+            segments.push(<a href={resolved.href} class="content-meta-moc">{mocLabel}</a>,)
+          }
         }
       }
 
@@ -76,8 +98,6 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
           {segments}
         </p>
       )
-    } else {
-      return null
     }
   }
 
