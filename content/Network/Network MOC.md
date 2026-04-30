@@ -1,9 +1,10 @@
 ---
 MOC: "[[index]]"
+socialDescription: Index of network related topics
 ---
 ---
 # Content
-## Networking Fundamentals
+## Fundamentals
 - [[Network Types]]
 - [[Network Hardware]]
 - [[OSI Model]] / [[TCP IP Model]]
@@ -14,7 +15,7 @@ MOC: "[[index]]"
 - [[Subnets]]
 - [[Top Level Domain]]
 - [[Denial of Service]]
-## Network Protocols
+## Protocols
 - [[TCP Protocol]]
 - [[UDP Protocol]]
 - [[ICMP Protocol]]

@@ -1,6 +1,6 @@
 ---
 MOC: "[[index]]"
-socialDescription: These are my HackTheBox writeups for the challenges and machines.
+socialDescription: HackTheBox write ups for the challenges and machines
 ---
 -- --
 

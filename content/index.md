@@ -1,5 +1,4 @@
 ---
-socialImage: "[[kali-cubism.png]]"
 socialDescription: Corban Pendrak's cybersecurity notes and writeups.
 title: Cybersecurity Notes
 description: Corban Pendrak's Cybersecurity Notes
@@ -74,6 +73,7 @@ This is Corban Pendrak's cybersecurity notes and writeups.
 - [ ] Work on breaks
 - [ ] OWASP article
 - [ ] Using Hashcat
+- [ ] Common ports
 - [ ] Recompile [bash](https://ftp.gnu.org/gnu/bash/)
 - [ ] Using tmux
 	- [ ] [Tmux Cheat Sheet](https://tmuxcheatsheet.com/)

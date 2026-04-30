@@ -1,5 +1,6 @@
 ---
 MOC: "[[index]]"
+socialDescription: Index of programming related topics
 ---
 ---
 # [[Programming Language]]

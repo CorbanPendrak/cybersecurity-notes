@@ -2,6 +2,7 @@
 MOC: "[[index]]"
 tags:
   - "#MOC"
+socialDescription: Index of web related topics
 ---
 ---
 # [[Web Enumeration]]

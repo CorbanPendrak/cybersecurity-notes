@@ -14,21 +14,24 @@ MOC: "[[index]]"
 * [x] Network Enumerated With Nmap
 	* Estimated time: 7h
 	* Actual time: 3h
-* [ ] Footprinting
+* [x] Footprinting
 	* Estimated time: 16h
 	* Actual time: 
-* [ ] Information Gathering - Web Edition
+* [x] Information Gathering - Web Edition
 	* Estimated time: 8h
 	* Actual time: 
-* [ ] Vulnerability Assessment 
+* [x] Vulnerability Assessment 
 	* Estimated time: 16h
 	* Actual time: 
-* [ ] File Transfers
+* [x] File Transfers
 	* Estimated time: 3h
 	* Actual time: 
+	* [[Transferring Files]]
 * [ ] Shells & Payloads
 	* Estimated time: 16h
 	* Actual time: 
+	* [[Shells]]
+	* [[Payloads]]
 * [ ] Using The Metaspoit Framework
 	* Estimated time: 5h
 	* Actual time: 

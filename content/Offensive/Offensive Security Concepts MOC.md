@@ -2,6 +2,7 @@
 tags:
   - MOC
 MOC: "[[index]]"
+socialDescription: Index of offensive related topics
 ---
 -- --
 
@@ -24,7 +25,8 @@ MOC: "[[index]]"
 - [[Physical Access Penetration]]
 - [[Transferring Files]]
 - [[Payloads]]
-- [[Red Teaming]]
+- [[Shells]]
+- [[Red Teaming]] (hidden)
 
 ## Theory
 - [[Rules of Engagement]]

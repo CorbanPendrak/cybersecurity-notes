@@ -2,9 +2,9 @@
 MOC: "[[Offensive Security Concepts MOC]]"
 ---
 -- --
-A shell gives a user a text interface to the computer. This is a common goal of a penetration test to get greater access to the system for [[enumeration]] and [[Linux Privilege Escalation|Linux]]/[[Windows Privilege Escalation|Windows]] privilege escalation.
+A payload is the main thing being transported, whether it is for an email or a space shuttle, and in cybersecurity, often refers to running something malicious, like [[Shells]].
 
+Staged payloads contain multiple levels to setup other parts of the payload, while stageless payloads run directly.
 
-# Cyber notes?
-GitHub
-Master version managed by one person?
+[[Metasploit]] is useful for creating and delivering payloads.
+

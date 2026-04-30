@@ -1,5 +1,6 @@
 ---
 MOC: "[[index]]"
+socialDescription: Index of Linux related topics
 ---
 ---
 # Content
