@@ -1,43 +1,24 @@
 ---
-tags:
-  - MOC
 MOC: "[[index]]"
+socialDescription: Index of Windows related topics
 ---
-- - -
-
+---
 > [!example]- Inbox
 > ```dataview
 > LIST
 > FROM [[]] and !outgoing([[]])
 > ```
-# Content
-
-## Windows Overview
-
+# [[Windows]]
 - [[Windows Basics]]
-- [[Windows Networking]]
-- [[Windows Defender]]
-- [[Windows Registry]]
-
-## Permissions
-
-- [[Windows User Accounts]]
-- [[Windows Groups]]
-- [[Windows File Permissions]]
-- [[Windows Hidden Files]]
-
-## CLI
-
+	- [[Windows Networking]]
+	- [[Windows Defender]]
+	- [[Windows Registry]]
+- Windows Permissions
+	- [[Windows User Accounts]]
+	- [[Windows Groups]]
+	- [[Windows File Permissions]]
+	- [[Windows Hidden Files]]
 - [[Windows Command Line]]
-## Scripting
-
 - [[PowerShell]]
 - [[Sysinternals]]
-
-# Related MOCs
-
-Related MOCs here...
-
-# To Do
-
-- [ ] 
+- 

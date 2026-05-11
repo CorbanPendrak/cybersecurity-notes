@@ -1,6 +1,4 @@
 ---
-tags:
-  - security
 MOC: "[[Security Concepts MOC]]"
 ---
 -- --
@@ -39,7 +37,7 @@ The file system helps file forensics in acquisition, validation, and extraction.
 
 ### NTFS
 
-The New Technology File System is Microsoft's proprietary system for [[Windows MOC|Windows]]. The Master File Table (MFT) entries can show deleted files.
+The New Technology File System is Microsoft's proprietary system for [[Windows]]. The Master File Table (MFT) entries can show deleted files.
 
 ### FAT
 
@@ -62,12 +60,11 @@ Deleted files that have not been overwritten remain on the disk. For SSDs, wear 
 The [[Windows Registry]] is useful for analysis, like programs run. Prefetch artefacts are stored in `%Windows%\Prefetch` and can show applications started and timestamps.
 
 ## Tools
-
 Volatility has a large number of plugins, is free and open source, and is common for memory forensics. FTK Imager is free and captures forensic images of hard disks. TSK and Autopsy are useful for forensics investigations with TSK as CLI and Autopsy as GUI.
 
 ## File Headers
 
-The file header identifies the format of the data for which application to use in Linux. To identify the file based on the header, use the [[The file Command|file command]]. [[Windows MOC|Windows]] relies on the file extension.
+The file header identifies the format of the data for which application to use in Linux. To identify the file based on the header, use the [[The file Command|file command]]. [[Windows]] relies on the file extension.
 # Email Forensics
 
 Email forensics studies the source and content of email messages. Personal Storage Table (PST) files store information about the emails in Microsoft Outlook and can be recovered with file forensics. Base64 is commonly used for encoding emails.

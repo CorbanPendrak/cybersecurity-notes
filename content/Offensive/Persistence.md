@@ -1,6 +1,4 @@
 ---
-tags:
-  - security
 MOC: "[[Security Concepts MOC]]"
 ---
 -- --
@@ -17,7 +15,7 @@ For an attack to have persistence, the object or process characteristics must co
 
 A scheduled task, like opening a port or checking on an outside application, can launch at pre-defined times to allow for persistent access.
 
-To find scheduled tasks in [[Windows MOC|Windows]], use [[PowerShell|PowerShell]].
+To find scheduled tasks in [[Windows]], use [[PowerShell|PowerShell]].
 
 ```PowerShell
 echo "Find scheduled tasks"
@@ -29,7 +27,7 @@ Get-ScheduledTask
 
 A service is a program that runs in the background.
 
-Find background [[Windows MOC|Windows]] services in [[PowerShell|PowerShell]]:
+Find background [[Windows]] services in [[PowerShell|PowerShell]]:
 
 ```PowerShell
 echo "Find services"
@@ -42,7 +40,7 @@ Get-WmiObject -Class win32_service | select name, displayname, state, pathname
 
 Creating a new user, especially with administrative privileges, is an important way to gain persistent access to a machine. 
 
-Get a list of users with [[PowerShell|PowerShell]] in [[Windows MOC|Windows]]:
+Get a list of users with [[PowerShell|PowerShell]] in [[Windows]]:
 
 ```PowerShell
 Get-LocalUser

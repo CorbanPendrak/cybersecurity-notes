@@ -36,7 +36,7 @@ The registry can be exported as a part of [[Forensics|forensics]] to get low-lev
 
 ## PowerShell
 
-To export registry keys on a remote [[Windows MOC|Windows computer]] with [[PowerShell|PowerShell]], use this command
+To export registry keys on a remote [[Windows]] computer with [[PowerShell|PowerShell]], use this command
 
 ```PowerShell
 Invoke-Command -ComputerName <IP> -Credential <Username> -ScriptBlock {

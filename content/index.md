@@ -19,6 +19,7 @@ This is Corban Pendrak's cybersecurity notes and writeups.
 - [[Programming MOC]]
 - [[Regular Expressions]]
 - [[Web MOC]]
+- [[Windows MOC]]
 - [[HackTheBox Writeups]]
 
 > [!warning]- Fix backlinks (for Obsidian editing)

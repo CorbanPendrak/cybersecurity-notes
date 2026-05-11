@@ -1,11 +1,11 @@
 ---
-tags:
-  - offensive
-MOC: "[[Offensive Security Concepts MOC]]"
+MOC:
+  - "[[Offensive Security Concepts MOC]]"
+  - "[[Windows MOC]]"
 ---
 -- --
 
-On [[Windows MOC]], the Administrator can do almost everything. The SYSTEM user can do anything, but a user cannot run as it. The best way to bypass UAC is simply ask the user for permission. 
+On [[Windows]], the Administrator can do almost everything. The SYSTEM user can do anything, but a user cannot run as it. The best way to bypass UAC is simply ask the user for permission. 
 
 Some files store passwords:
 - C:\unattend.xml
