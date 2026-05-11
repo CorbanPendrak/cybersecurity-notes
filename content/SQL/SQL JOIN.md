@@ -101,7 +101,7 @@ Produces same result as [[SQL JOIN#LEFT|LEFT JOIN]].
 
 # FULL
 
-`FULL JOIN` returns the results from both tables but is not supported by [[SQL Description#MySQL|MySQL]] or [[SQL Description#MariaDB|MariaDB]].
+`FULL JOIN` returns the results from both tables but is not supported by [[SQL#MySQL|MySQL]] or [[SQL#MariaDB|MariaDB]].
 
 It can however be implemented using [[SQL UNION|UNION]].
 

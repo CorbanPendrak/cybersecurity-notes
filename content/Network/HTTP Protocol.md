@@ -1,7 +1,9 @@
-#internet 
-[[Web MOC]]
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Web MOC]]"
+  - "[[Network MOC]]"
+---
+---
 
 The HTTP protocol is based on requests and responses, consisting of a header and body.
 

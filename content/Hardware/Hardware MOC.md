@@ -1,6 +1,4 @@
 ---
-tags:
-  - MOC
 MOC: "[[index]]"
 socialDescription: Index of hardware related topics
 ---

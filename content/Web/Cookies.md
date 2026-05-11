@@ -1,6 +1,8 @@
-#internet 
-[[Web MOC]]
-- - -
+---
+MOC:
+  - "[[Web MOC]]"
+---
+---
 
 Cookies are tiny files in a web server. These are commonly used to save the session ID to keep the user logged in across the site. 
 

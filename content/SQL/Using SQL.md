@@ -4,7 +4,7 @@
 
 SQL commands are case insensitive but typically capitalized.
 
-After [[Installing MariaDB#Connecting|connecting]] to the [[SQL Description#Popular Database Management Systems|DBMS]], choose the database with `USE`. 
+After [[Installing MariaDB#Connecting|connecting]] to the [[SQL#Popular Database Management Systems|DBMS]], choose the database with `USE`. 
 
 ```Shell
 MariaDB [none]>USE databasename;

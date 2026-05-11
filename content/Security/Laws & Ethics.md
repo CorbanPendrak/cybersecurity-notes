@@ -1,7 +1,4 @@
 ---
-tags:
-  - security
-  - "#ethics"
 MOC: "[[Security Concepts MOC]]"
 ---
 -- --

@@ -1,6 +1,8 @@
-#linux #GUI #network
-[[Introduction to Linux MOC]]
-* * *
+---
+MOC:
+  - "[[Linux MOC]]"
+---
+---
 
 Using the [[Linux GUI]] for configuring the [[Network MOC]] is simple, but not able to be completed on the [[Linux Server]], which requires the [[Linux Terminal]].
 

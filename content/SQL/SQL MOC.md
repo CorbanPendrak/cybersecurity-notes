@@ -1,46 +1,27 @@
-#MOC
-[[index]]
-- - -
-
-> [!example]- Inbox
-> ```dataview
-> LIST
-> FROM [[]] and !outgoing([[]])
-> ```
-# Content
-
-## Databases
-- [[SQL Description]]
+---
+MOC:
+  - "[[index]]"
+---
+---
+# [[SQL]]
 - [[Database Types]]
-- [[Installing MariaDB]]
+	- [[Installing MariaDB]]
+	- [[MySQL]]
 - [[Database Server]]
-## Basics
 - [[Using SQL]]
-- [[SQL SELECT]]
-- [[SQL ORDER BY]]
-- [[SQL WHERE]]
-- [[SQL DISTINCT]]
-- [[SQL AS]]
-- [[SQL LIMIT]]
-## JOIN Command
-- [[SQL JOIN]]
-
-## Operators
+	- [[SQL SELECT]]
+	- [[SQL ORDER BY]]
+	- [[SQL WHERE]]
+	- [[SQL DISTINCT]]
+	- [[SQL AS]]
+	- [[SQL LIMIT]]
+	- [[SQL JOIN]]
 - [[SQL Operators]]
 - [[SQL Subqueries]]
 - [[SQL EXISTS]]
 - [[SQL UNION]]
-
-## Administration
-- [[Creating Tables]]
-- [[Adding Data]]
-- [[Scripting SQL]]
-- [[Deleting a Table]]
-
-# Related MOCs
-
-Related MOCs here...
-
-# To Do
-
-- [ ] 
+- Administration
+	- [[Creating Tables]]
+	- [[Adding Data]]
+	- [[Scripting SQL]]
+	- [[Deleting a Table]]

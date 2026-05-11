@@ -1,6 +1,4 @@
 ---
-tags:
-  - MOC
 MOC: "[[index]]"
 ---
 -- --

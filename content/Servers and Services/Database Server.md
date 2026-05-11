@@ -5,7 +5,7 @@ MOC: "[[Servers and Services MOC]]"
 ---
 -- --
 
-A database server provides other computers with services for accessing a database, often using a [[SQL Description#Popular Database Management Systems|DBMS]]. 
+A database server provides other computers with services for accessing a database, often using a [[SQL#Popular Database Management Systems|DBMS]]. 
 
 # PHPMyAdmin & Adminer
 

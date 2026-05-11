@@ -2,7 +2,7 @@
 [[SQL MOC]]
 -- --
 
-This is how to install the [[SQL Description#MariaDB|MariaDB]].
+This is how to install the [[SQL#MariaDB|MariaDB]].
 
 # Ubuntu
 

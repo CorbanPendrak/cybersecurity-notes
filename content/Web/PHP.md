@@ -1,6 +1,8 @@
-#internet 
-[[Web MOC]]
-- - -
+---
+MOC:
+  - "[[Web MOC]]"
+---
+---
 
 PHP is a server-side programming language which can generate [[HTML]] to send. Unlike [[JavaScript]], PHP is run on the web server.
 

@@ -4,8 +4,11 @@ socialDescription: Index of Linux related topics
 ---
 ---
 # Content
-- [[Introduction to Linux MOC]]
-- [[The Linux Environment MOC]]
+- Linux Environment
+	- [[Environment Variables]]
+	- [[File Permissions]]
+	- [[Folder Structure]]
+	- [[Hidden Files]]
 - [[Linux Server]]
 - [[Linux Navigation MOC]]
 	- [[Interrupts]]

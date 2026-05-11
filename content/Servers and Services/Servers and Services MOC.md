@@ -1,6 +1,8 @@
-#MOC
-[[index]]
-- - -
+---
+MOC:
+  - "[[index]]"
+---
+---
 
 > [!example]- Inbox
 > ```dataview

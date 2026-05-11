@@ -1,7 +1,4 @@
 ---
-tags:
-  - red
-  - progress/active
 MOC: "[[Offensive Security Concepts MOC]]"
 ---
 -- --

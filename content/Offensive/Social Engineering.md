@@ -1,6 +1,4 @@
 ---
-tags:
-  - offensive
 MOC: "[[Offensive Security Concepts MOC]]"
 ---
 -- --

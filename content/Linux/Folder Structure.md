@@ -1,14 +1,12 @@
-
-#linux #file-system 
-[[The Linux Environment MOC]]
-- - -
+---
+MOC:
+  - "[[Linux MOC]]"
+---
+---
 
 The root of the file system is "/"
-
 Using an absolute path, like `/home/corban` goes relative to the root.
-
 ## Normal Root Folders
-
 * **bin**::stores system executable files (binary)
 ^1710180343668
 * **boot**::stores boot up process files

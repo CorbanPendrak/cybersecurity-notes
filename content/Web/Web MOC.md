@@ -1,7 +1,5 @@
 ---
 MOC: "[[index]]"
-tags:
-  - "#MOC"
 socialDescription: Index of web related topics
 ---
 ---
@@ -61,6 +59,3 @@ socialDescription: Index of web related topics
 	- file upload
 	- path traversal
 	- sensitive data
-
-# To Do
-- [ ] 
