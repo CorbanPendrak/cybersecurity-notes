@@ -1,8 +1,9 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC: "[[C MOC]]"
+---
+---
 
-Conditionals check the specified consideration and execute the resulting code block.
+Conditionals in [[C]] check the specified consideration and execute the resulting code block.
 
 Ternaries are useful for two outcomes using `?` and `:` inside a function. 
 

@@ -31,7 +31,7 @@ MOC: "[[index]]"
 - [[Windows Command Line]]
 ## Scripting
 
-- [[Windows PowerShell]]
+- [[PowerShell]]
 - [[Sysinternals]]
 
 # Related MOCs

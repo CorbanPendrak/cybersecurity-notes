@@ -19,7 +19,7 @@ Some tools for steganography are Crypture, which uses BMP images, Binwalk, which
 
 # Log Files
 
-Log files contain detailed chronological information about events and can be viewed through the GUI, [[Windows PowerShell]] or [[Linux Terminal]], or Log collections. The main logs are Security, System, and Application logs. Time zones should be carefully noted. These are some common Windows event codes.
+Log files contain detailed chronological information about events and can be viewed through the GUI, [[PowerShell]] or [[Linux Terminal]], or Log collections. The main logs are Security, System, and Application logs. Time zones should be carefully noted. These are some common Windows event codes.
 
 | Event Code | Meaning                              |
 | ---------- | ------------------------------------ |

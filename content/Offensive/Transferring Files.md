@@ -45,7 +45,7 @@ $ ftp <IP> <PORT>
 > (New-Object Net.WebClient).DownloadFile('ftp://<IP>:<PORT>/<FILE>', '<OUTPUT>')
 ```
 ## Web
-Other [[Windows PowerShell]] download methods [here](https://gist.github.com/HarmJ0y/bb48307ffa663256e239).
+Other [[PowerShell]] download methods [here](https://gist.github.com/HarmJ0y/bb48307ffa663256e239).
 ```shell
 # Linux Upload
 $ python3 -m http.server
@@ -124,7 +124,7 @@ $ ncat -l -p <PORT> --recv-only > <FILE>
 # TCP
 $ cat < /dev/tcp/<IP>/<PORT> > <FILE>
 ```
-## [[Windows PowerShell|PowerShell]]
+## [[PowerShell|PowerShell]]
 ```powershell
 # Setup
 > Test-NetConnection -ComputerName <HOST> -Port <PORT>

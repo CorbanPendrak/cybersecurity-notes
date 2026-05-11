@@ -7,7 +7,7 @@ MOC: "[[Windows MOC]]"
 
 The Windows Registry is a hierarchical database of low-level settings for the operating system and any applications that support the registry. The registry values are instructions, the registry keys are folders for the values data, and the registry hives categorize the data. 
 
-The program `regedit` can edit the registry, but an error in the registry can completely break the system. [[Windows PowerShell|PowerShell]] can traverse the directory like regular files and create file values.
+The program `regedit` can edit the registry, but an error in the registry can completely break the system. [[PowerShell|PowerShell]] can traverse the directory like regular files and create file values.
 
 # Root Keys
 
@@ -36,7 +36,7 @@ The registry can be exported as a part of [[Forensics|forensics]] to get low-lev
 
 ## PowerShell
 
-To export registry keys on a remote [[Windows MOC|Windows computer]] with [[Windows PowerShell|PowerShell]], use this command
+To export registry keys on a remote [[Windows MOC|Windows computer]] with [[PowerShell|PowerShell]], use this command
 
 ```PowerShell
 Invoke-Command -ComputerName <IP> -Credential <Username> -ScriptBlock {

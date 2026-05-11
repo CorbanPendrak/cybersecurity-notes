@@ -2,6 +2,7 @@
 socialDescription: Corban Pendrak's cybersecurity notes and writeups.
 title: Cybersecurity Notes
 description: Corban Pendrak's Cybersecurity Notes
+socialImage: socialPreview.png
 ---
 ---
 
