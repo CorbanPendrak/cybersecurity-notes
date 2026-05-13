@@ -1,7 +1,8 @@
 ---
 MOC: "[[Offensive Security Concepts MOC]]"
 ---
--- --
+---
+
 A shell gives a user a text interface to the computer. This is a common goal of a penetration test to get greater access to the system for [[enumeration]] and [[Linux Privilege Escalation|Linux]]/[[Windows Privilege Escalation|Windows]] privilege escalation.
 
 A web shell is a shell accessible from the browser to run commands. [Laudanum](https://github.com/jbarcia/Web-Shells/tree/master/laudanum) is a popular repository of web shells, and can be found at `/usr/share/laudanum` for Kali and Parrot OS. The [[PowerShell]] based`/usr/share/nishang/Antak-WebShell` is also useful with [[Windows]] systems. These files often need to be modified for your [[IP addresses|IPs]] and credentials. To escape detection, it is often necessary to strip comments/obfuscate the payload.

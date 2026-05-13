@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `mkdir` command creates directories.
 

@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 # TCP
 

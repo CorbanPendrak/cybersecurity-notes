@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The `UNION` [[Using SQL|command]] combines the result of two [[SQL SELECT|SELECT]] statements.
 

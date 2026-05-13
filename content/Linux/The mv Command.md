@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - - 
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `mv` command moves or renames files and folders, removing the original. Since there is no rename command, renaming is done by moving the file to the same location with the new name.
 

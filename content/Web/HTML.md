@@ -1,6 +1,5 @@
 ---
-MOC:
-  - "[[Web MOC]]"
+MOC: "[[Web MOC]]"
 ---
 ---
 

@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Booleans are binary, either `True` or `False`.  
 

@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `grep` command searches for text within a given file or output, often with [[Regular Expressions]].  
 

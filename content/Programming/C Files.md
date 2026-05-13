@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Reading files is almost identical to reading the command line, except the file handler is opened with `fopen` and closed with `fclose`.
 

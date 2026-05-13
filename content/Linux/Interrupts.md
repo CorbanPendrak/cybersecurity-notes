@@ -1,6 +1,8 @@
-#terminal 
-[[Linux Navigation MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Navigation MOC]]"
+---
+---
 
 Some commands run until the user quits them. 
 

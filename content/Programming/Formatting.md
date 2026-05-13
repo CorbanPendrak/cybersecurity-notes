@@ -1,6 +1,8 @@
-#programming 
-[[Programming MOC]]
--- --
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 Programming languages have varying syntax requirements, but generally allow for many styles, like tabs vs spaces. Using a style guide helps create consistency and is based on the language. IDEs can help by autoformatting code.
 

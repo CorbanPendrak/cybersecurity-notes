@@ -1,9 +1,9 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `crontab` command views all scheduled tasks.
-
 # Usage
 
 `crontab`

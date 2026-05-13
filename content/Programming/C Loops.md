@@ -1,7 +1,8 @@
-#programming 
-[[C MOC]]
--- --
-
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 # While
 
 `while` loops keep looping until a condition is met or the loop broken:

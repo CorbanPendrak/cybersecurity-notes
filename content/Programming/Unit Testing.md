@@ -1,6 +1,8 @@
-#programming 
-[[Programming MOC]]
--- --
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 A unit test checks that a complete independent group of code works. 
 

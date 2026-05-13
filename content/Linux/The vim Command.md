@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `vim` command is a text editor similar to `nano`. It is more difficult than `nano` but more powerful.
 

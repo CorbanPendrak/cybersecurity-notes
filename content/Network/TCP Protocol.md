@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 The Transmission Control Protocol focuses on reliability and is common for most tasks. Setup requires a handshake and can retransmit data. The downside of TCP is its slow transmission compared to the [[UDP Protocol]]. 
 

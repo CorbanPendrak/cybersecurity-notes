@@ -1,7 +1,4 @@
 ---
-tags:
-  - hardware
-  - programming
 MOC: "[[Hardware MOC]]"
 ---
 GDB is the GNU debugger, which is useful for examining binary applications, exploit development, and reverse engineering compiled programs. To set Intel syntax, add set disassembly-flavor intel to ~/.gdbinit. 

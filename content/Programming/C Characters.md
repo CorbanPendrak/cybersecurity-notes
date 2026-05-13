@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 C stores strings of characters as bytes in the char [[C Types|data type]].
 

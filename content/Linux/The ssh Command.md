@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `ssh` command stands for Secure SHell and allows remote login for a Linux computer over terminal.
 

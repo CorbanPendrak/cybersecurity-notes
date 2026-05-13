@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 A subnet splits a network into sections. The IP address contains the network identifier and the host identifier. The subnet mask determines the size of the host identifier.
 

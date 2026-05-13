@@ -1,6 +1,8 @@
-#terminal #linux 
-[[Linux Commands MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Commands MOC]]"
+---
+---
 
 For most commands it is possible to separate stdout and stderr by piping.
 

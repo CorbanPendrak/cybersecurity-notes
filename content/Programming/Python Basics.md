@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 These are some basics of the Python Language
 

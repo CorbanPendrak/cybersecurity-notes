@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Variables store, modify, and reuse information.
 

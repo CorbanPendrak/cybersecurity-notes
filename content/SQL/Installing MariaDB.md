@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 This is how to install the [[SQL#MariaDB|MariaDB]].
 

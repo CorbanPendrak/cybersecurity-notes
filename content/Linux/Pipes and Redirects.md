@@ -1,7 +1,8 @@
-#terminal 
-[[Linux Architecture and Components MOC]]
-- - -
-
+---
+MOC:
+  - "[[Linux Architecture and Components MOC]]"
+---
+---
 # Pipes
 
 Pipes combine programs for more functionality.

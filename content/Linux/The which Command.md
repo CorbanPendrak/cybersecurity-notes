@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 Shows where tool is installed in PATH
 

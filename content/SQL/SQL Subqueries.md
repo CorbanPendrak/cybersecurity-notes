@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 Subqueries run within a query before the outer query.
 
@@ -17,7 +18,7 @@ Subqueries run within a query before the outer query.
 | 7          | Dennis    | Avery    | P.O. Box 506, 4804 Molestie Avenue | Matlock           | United Kingdom |
 | 8          | Igor      | Malone   | 6627 Porttitor Rd.                 | Irvine            | United Kingdom |
 | 9          | Connor    | Witt     | 5979 Vel St.                       | Tain              | United Kingdom |
-| 10         | Karen     | Marquez  | Ap \#524-1173 Metus. Road          | Annapolis Royal   | Canada         |
+| 10         | Karen     | Marquez  | Ap # 524-1173 Metus. Road          | Annapolis Royal   | Canada         |
 
 `orders`
 

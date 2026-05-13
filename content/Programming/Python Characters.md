@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 To get the ascii value of a character, use `ord()`, with the reverse as `chr()`. 
 

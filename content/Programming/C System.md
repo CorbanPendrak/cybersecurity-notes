@@ -1,7 +1,8 @@
-
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Most of the commands are all programs and likely written in C. The `system()` method in the `stdlib.h` library allows accessing the terminal.
 

@@ -1,6 +1,8 @@
-#linux 
-[[Linux Architecture and Components MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Architecture and Components MOC]]"
+---
+---
 
 The process for installing from source varies for the different software, so check documentation. 
 

@@ -1,6 +1,8 @@
-#terminal #linux 
-[[Linux Navigation MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Navigation MOC]]"
+---
+---
 
 Tab completion fills out most of the typing for common programs like `cd`. 
 

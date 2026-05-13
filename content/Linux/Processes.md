@@ -1,6 +1,8 @@
-#linux 
-[[Linux Architecture and Components MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Architecture and Components MOC]]"
+---
+---
 
 A process is a running program. 
 

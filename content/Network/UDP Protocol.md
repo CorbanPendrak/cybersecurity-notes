@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 The User Datagram Protocol (UDP) has fast data transmission at the expense of reliability since no handshake is required. This protocol is useful for video and voice chats since speed is more important.
 

@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 For processor-intensive programs, multithreading can run tasks concurrently.
 

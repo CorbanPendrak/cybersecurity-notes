@@ -1,10 +1,7 @@
 ---
-tags:
-  - network
 MOC: "[[Network MOC]]"
 ---
-
-- - - 
+---
 
 The Open Systems Interconnection (OSI) is a theoretical model for network  communication that is more abstract version of the [[TCP IP Model]].
 

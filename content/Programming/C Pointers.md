@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Pointers hold the memory address of another variable for pointing.
 

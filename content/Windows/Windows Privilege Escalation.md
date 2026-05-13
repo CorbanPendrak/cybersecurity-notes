@@ -1,7 +1,5 @@
 ---
-MOC:
-  - "[[Offensive Security Concepts MOC]]"
-  - "[[Windows MOC]]"
+MOC: "[[Offensive Security Concepts MOC]]"
 ---
 -- --
 

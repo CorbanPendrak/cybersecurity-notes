@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 IP addresses identifies computers per NIC. 
 

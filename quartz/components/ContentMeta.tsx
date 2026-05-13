@@ -59,23 +59,47 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
       if (options.showMOC) {
         let mocMetaRaw = 
-          (fileData.frontmatter?.MOC as string | undefined) ??
-          (fileData.frontmatter?.moc as string | undefined)
+          (fileData.frontmatter?.MOC as string | string[] | undefined) ??
+          (fileData.frontmatter?.moc as string | string[] | undefined)
 
         if (mocMetaRaw) {
-          const mocLabel =
-            (fileData.frontmatter?.MOCTitle as string | undefined) ??
-            (fileData.frontmatter?.mocTitle as string | undefined) ??
-            mocMetaRaw.slice(2,-2).trim()
-          
-          const resolved = findMocTarget(mocMetaRaw, allFiles)
+          if (Array.isArray(mocMetaRaw)) {
+            for (const mocStr of mocMetaRaw) {
+              const mocLabel =
+                (fileData.frontmatter?.MOCTitle as string | undefined) ??
+                (fileData.frontmatter?.mocTitle as string | undefined) ??
+                mocStr.replaceAll("[[", "").replaceAll("]]", "").trim()
+              const resolved = findMocTarget(mocStr, allFiles)
 
-          if (resolved.type === "internal" && fileData.slug && resolved.target.slug) {
-            const href = resolveRelative(fileData.slug, resolved.target.slug)
-            segments.push(
-              <a href={href} class="content-meta-moc internal">{mocLabel}</a>,)
-          } else if (resolved.type === "external" || resolved.type === "fallback") {
-            segments.push(<a href={resolved.href} class="content-meta-moc">{mocLabel}</a>,)
+              if (resolved.type === "internal" && fileData.slug && resolved.target.slug) {
+                const href = resolveRelative(fileData.slug, resolved.target.slug)
+                segments.push(
+                  <a href={href} class="content-meta-moc internal">
+                    {mocLabel}
+                  </a>,<br />,
+                )
+              } else if (resolved.type === "external" || resolved.type === "fallback") {
+                segments.push(<a href={resolved.href} class="content-meta-moc">{mocLabel}</a>,<br />,)
+              }
+            }
+          } else {
+            const mocLabel =
+              (fileData.frontmatter?.MOCTitle as string | undefined) ??
+              (fileData.frontmatter?.mocTitle as string | undefined) ??
+              mocMetaRaw.replaceAll("[[", "").replaceAll("]]", "").trim()
+
+            const resolved = findMocTarget(mocMetaRaw, allFiles)
+
+            if (resolved.type === "internal" && fileData.slug && resolved.target.slug) {
+              const href = resolveRelative(fileData.slug, resolved.target.slug)
+              segments.push(
+                <a href={href} class="content-meta-moc internal">
+                  {mocLabel}
+                </a>,
+              )
+            } else if (resolved.type === "external" || resolved.type === "fallback") {
+              segments.push(<a href={resolved.href} class="content-meta-moc">{mocLabel}</a>,)
+            }
           }
         }
       }

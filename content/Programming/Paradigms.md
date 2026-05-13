@@ -1,6 +1,8 @@
-#programming 
-[[Programming MOC]]
--- --
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 Paradigms are the larger way to structure and organize code, especially for complex programs.
 

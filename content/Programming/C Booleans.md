@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Booleans are not built-in, but included in the standard library `stdbool.h` and print as `1` or `0`.
 

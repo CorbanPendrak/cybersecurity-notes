@@ -1,6 +1,8 @@
-#programming
-[[Programming MOC]]
--- -
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 A computer program is a set of instructions written in a [[Programming Language|programming language]] for the computer and user to understand. 
 

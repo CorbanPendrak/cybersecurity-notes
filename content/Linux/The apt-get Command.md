@@ -1,6 +1,8 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Commands MOC]]"
+---
+---
 
 The `apt-get` or `apt` command downloads packages easily.
 

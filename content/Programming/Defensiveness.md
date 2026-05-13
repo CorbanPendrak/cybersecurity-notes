@@ -1,6 +1,8 @@
-#programming 
-[[Programming MOC]]
--- --
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 The main principle of defensive programming is to plan for the unexpected. Rather than focusing on what happens when things work, it focuses on safety and security.
 

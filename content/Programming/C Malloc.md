@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Variables declared in code are saved to the heap, requiring limits, but data can be put into the heap for varying limits, like user input.
 

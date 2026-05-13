@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Numbers are useful for math, data, tracking, and more. 
 

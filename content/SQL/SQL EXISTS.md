@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The `EXISTS` [[Using SQL|command]] checks for the existence of records in a [[SQL Subqueries|subquery]].
 

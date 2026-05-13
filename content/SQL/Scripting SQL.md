@@ -1,9 +1,7 @@
 ---
-tags:
-  - SQL
 MOC: "[[SQL MOC]]"
 ---
--- --
+---
 
 SQL scripts are saved to a text file with `.sql`.
 

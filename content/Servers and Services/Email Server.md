@@ -1,6 +1,4 @@
 ---
-tags:
-  - server
 MOC: "[[Servers and Services MOC]]"
 ---
 -- --

@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 C has many simple math operations built into the language, but the `math.h` library offers more functions.
 

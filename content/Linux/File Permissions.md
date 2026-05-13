@@ -1,6 +1,5 @@
 ---
-MOC:
-  - "[[Linux MOC]]"
+MOC: "[[Linux MOC]]"
 ---
 ---
 

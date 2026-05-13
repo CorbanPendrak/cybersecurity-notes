@@ -1,8 +1,4 @@
 ---
-tags:
-  - command
-  - terminal
-  - security
 MOC: "[[Linux Commands MOC]]"
 ---
 - - -

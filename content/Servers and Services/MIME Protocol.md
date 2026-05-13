@@ -1,6 +1,4 @@
 ---
-tags:
-  - network
 MOC: "[[Network MOC]]"
 ---
 -- --

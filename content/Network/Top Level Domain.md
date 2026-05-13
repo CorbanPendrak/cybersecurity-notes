@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 The Top Level Domain (TLD) is the end of the domain name to indicate the [[DNS Protocol|DNS]] server to search first.
 

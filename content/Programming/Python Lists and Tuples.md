@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Lists and tuples store multiple items, which don't need to be the same data type, according to an order.
 

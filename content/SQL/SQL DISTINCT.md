@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The `DISTINCT` [[Using SQL|command]] removes duplicated data rows from a [[SQL SELECT|SELECT]] query
 
@@ -21,7 +22,7 @@ SELECT DISTINCT field FROM tablename;
 | 7          | Dennis    | Avery    | P.O. Box 506, 4804 Molestie Avenue | Matlock           | United Kingdom |
 | 8          | Igor      | Malone   | 6627 Porttitor Rd.                 | Irvine            | United Kingdom |
 | 9          | Connor    | Witt     | 5979 Vel St.                       | Tain              | United Kingdom |
-| 10         | Karen     | Marquez  | Ap \#524-1173 Metus. Road          | Annapolis Royal   | Canada         |
+| 10         | Karen     | Marquez  | Ap # 524-1173 Metus. Road          | Annapolis Royal   | Canada         |
 
 ## Without `DISTINCT`
 

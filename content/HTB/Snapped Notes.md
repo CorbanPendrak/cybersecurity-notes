@@ -1,7 +1,7 @@
 ---
 MOC: "[[Offensive Security Concepts MOC]]"
 ---
--- --
+---
 
 While these notes can be compiled into a writeup or a [[Penetration Test Report Template|report]], this section is primarily for you. Delete placeholder information where needed. This is where the summary for the report goes.
 

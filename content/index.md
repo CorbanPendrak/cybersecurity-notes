@@ -156,5 +156,13 @@ views:
         direction: ASC
       - property: formula.Num Backlinks
         direction: DESC
+  - type: list
+    name: View
+    order:
+      - file.name
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 50
 
 ```

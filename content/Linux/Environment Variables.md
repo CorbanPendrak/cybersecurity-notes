@@ -1,6 +1,5 @@
 ---
-MOC:
-  - "[[Linux MOC]]"
+MOC: "[[Linux MOC]]"
 ---
 ---
 Environment variables show data stored in terminal by multiple programs and are prefixed with a `$`, like `$HOME`.

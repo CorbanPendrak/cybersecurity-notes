@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Dictionaries are similar to [[Python Lists and Tuples]], but stores unordered key-value pairs. These use `{}`, like `{'total': 3, "completed": 1}`.
 

@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The `WHERE` [[Using SQL|command]] can filter results from a [[SQL SELECT|SELECT]]. 
 

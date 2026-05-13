@@ -1,9 +1,7 @@
 ---
-tags:
-  - network
 MOC: "[[Network MOC]]"
 ---
--- --
+---
 
 The TCP/IP model is a more applicable version of the [[OSI Model]].
 

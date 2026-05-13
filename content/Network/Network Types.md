@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 The internet is a Wide Area Network (WAN), while smaller networks are Local Area Networks (LAN).
 # Topologies

@@ -1,6 +1,8 @@
-#linux
-[[Linux Architecture and Components MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Architecture and Components MOC]]"
+---
+---
 
 Package managers simplify installing new software and are on most modern distributions.
 

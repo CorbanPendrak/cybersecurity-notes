@@ -1,6 +1,7 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC: "[[Linux Commands MOC]]"
+---
+---
 
 The `dpkg` command installs packages generated for a Debian-based distribution, like Ubuntu, which end in `.deb`.
 

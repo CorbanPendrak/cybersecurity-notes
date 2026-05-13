@@ -1,6 +1,8 @@
-#programming 
-[[Python MOC]]
--- --
+---
+MOC:
+  - "[[Python MOC]]"
+---
+---
 
 Strings are series of characters of any length. In Python, strings are encapsulated in `' '` or `" "`. Since either quotes work, they can encapsulate the other: `'"Hello!" I shout'`.
 

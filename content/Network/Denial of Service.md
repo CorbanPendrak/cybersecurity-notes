@@ -1,6 +1,8 @@
-#network 
-[[Network MOC]]
-- - -
+---
+MOC:
+  - "[[Network MOC]]"
+---
+---
 
 Denial of Service (DoS) is an attack to consume resources and prevent real customers from connecting. Prevented by limiting connections.
 

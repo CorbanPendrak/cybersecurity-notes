@@ -1,5 +1,7 @@
 ---
-MOC: "[[Web MOC]]"
+MOC:
+  - "[[Web MOC]]"
+  - "[[Offensive Security Concepts MOC]]"
 ---
 -- --
 **WHOIS** provides some information about internet resources, formalized with RFC 812. This typically includes:

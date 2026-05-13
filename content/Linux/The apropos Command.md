@@ -1,6 +1,8 @@
-#command #terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Commands MOC]]"
+---
+---
 
 Search manuals on system for keyword to find a command for a certain function. Use [[The man Command]] to display manual for command.
 

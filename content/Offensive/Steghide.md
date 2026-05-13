@@ -1,10 +1,7 @@
 ---
-tags:
-  - command
-  - terminal
 MOC: "[[General Security Concepts]]"
 ---
-- - -
+---
 
 Steghide can hide and extract data in various file types from the command line.
 

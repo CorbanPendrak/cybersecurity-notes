@@ -1,9 +1,7 @@
 ---
-tags:
-  - SQL
 MOC: "[[SQL MOC]]"
 ---
--- --
+---
 
 Tables are deleted with `DROP TABLE`.
 

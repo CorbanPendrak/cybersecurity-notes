@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The [[Using SQL|SQL command]] `ORDER BY` orders the results from data returned by [[SQL SELECT|SELECT]] 
 

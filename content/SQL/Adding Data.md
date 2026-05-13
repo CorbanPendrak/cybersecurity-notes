@@ -1,6 +1,4 @@
 ---
-tags:
-  - SQL
 MOC: "[[SQL MOC]]"
 ---
 -- --

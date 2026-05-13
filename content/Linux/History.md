@@ -1,6 +1,8 @@
-#terminal #linux 
-[[Linux Navigation MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Navigation MOC]]"
+---
+---
 
 Previously typed commands are stored in a unique history file for each terminal shell. In the BASH shell, the file is stored in the home folder named `.bash_history`
 

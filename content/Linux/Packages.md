@@ -1,6 +1,8 @@
-#linux 
-[[Linux Architecture and Components MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Architecture and Components MOC]]"
+---
+---
 
 Packages bundle software and configuration and is managed by [[Package Managers]].
 

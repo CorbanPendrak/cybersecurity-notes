@@ -1,6 +1,8 @@
-#terminal 
-[[Linux Navigation MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Navigation MOC]]"
+---
+---
 
 Parameters give different options to the command. Some commands take only a long form or short form, sometimes both, depending on the creator.
 

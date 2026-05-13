@@ -1,6 +1,4 @@
 ---
-tags:
-  - windows
 MOC: "[[Windows MOC]]"
 ---
 -- --

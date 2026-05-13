@@ -1,6 +1,8 @@
-#programming 
-[[Programming MOC]]
--- --
+---
+MOC:
+  - "[[Programming MOC]]"
+---
+---
 
 # Effective Searching
 

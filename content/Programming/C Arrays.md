@@ -1,6 +1,8 @@
-#programming 
-[[C MOC]]
--- --
+---
+MOC:
+  - "[[C MOC]]"
+---
+---
 
 Arrays are created by a `[]` after the variable name and with `{}`. All items in the array must be the stated type. The array is restricted to the size when created.
 

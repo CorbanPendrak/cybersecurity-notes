@@ -1,6 +1,7 @@
-#SQL 
-[[SQL MOC]]
--- --
+---
+MOC: "[[SQL MOC]]"
+---
+---
 
 The `SELECT` [[Using SQL#Structure|command]] retrieves data from one or more tables in a database and the `FROM` identifies the table to retrieve data from. 
 
@@ -32,7 +33,7 @@ SELECT * FROM customers;
 | 7          | Dennis    | Avery    | P.O. Box 506, 4804 Molestie Avenue | Matlock           | United Kingdom |
 | 8          | Igor      | Malone   | 6627 Porttitor Rd.                 | Irvine            | United Kingdom |
 | 9          | Connor    | Witt     | 5979 Vel St.                       | Tain              | United Kingdom |
-| 10         | Karen     | Marquez  | Ap \#524-1173 Metus. Road          | Annapolis Royal   | Canada         |
+| 10         | Karen     | Marquez  | Ap # 524-1173 Metus. Road          | Annapolis Royal   | Canada         |
 
 To get the `firstName` and `lastName` of every customer in the table:
 ```SQL

@@ -1,6 +1,7 @@
-#terminal 
-[[Linux Commands MOC]]
-- - -
+---
+MOC:
+  - "[[Linux Commands MOC]]"
+---
 
 Chaining commands helps with scripting. Closely related with chaining is [[Pipes and Redirects|pipes and redirects]].
 
